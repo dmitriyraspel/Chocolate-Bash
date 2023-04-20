@@ -1,6 +1,6 @@
 <?php
 /**
- * rspl base Theme Customizer
+ * Chocolate-Bash Theme Customizer
  *
  * @package rspl_base
  */

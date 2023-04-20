@@ -49,7 +49,7 @@
 			<div class="theme-autor">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( '%1$s by %2$s', 'rspl_theme' ), 'rspl base', '<a href="https://raspel.ru/">Dmitriy Raspel</a>' );
+				printf( esc_html__( '%1$s by %2$s', 'rspl_theme' ), 'Chocolate-Bash', '<a href="https://raspel.ru/">Dmitriy Raspel</a>' );
 				?>
 			</div><!-- .theme-autor -->
 		</div><!-- .site-info -->

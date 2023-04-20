@@ -1,4 +1,4 @@
-=== rspl base ===
+=== Chocolate-Bash ===
 
 Contributors: Dmitriy Raspel
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, 
@@ -25,7 +25,7 @@ A starter theme called rspl base.
 
 = Does this theme support any plugins? =
 
-rspl base includes support for WooCommerce and for Gutenberg.
+Chocolate-Bash includes support for WooCommerce and for Gutenberg.
 
 == Changelog ==
 
