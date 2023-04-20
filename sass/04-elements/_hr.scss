@@ -1,0 +1,16 @@
+hr {
+	// background-color: $color__background-hr;
+	border: 0px;
+	height: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	// margin-bottom: $global--spacing-vertical;
+	width: $content-width;
+	max-width: $alignwide-width;
+
+	&.aligncenter  {
+		max-width: $aligndefault-width;
+	}
+}
+
+// .wp-block-separator {}

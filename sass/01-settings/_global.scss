@@ -1,0 +1,37 @@
+/* Variables */
+
+:root {
+    // --aligndefault-width: 720px;
+    --aligndefault-width: #{ $aligndefault-width };
+    --alignwide-width: #{ $alignwide-width };
+    
+    --responsive--aligndefault-width: min($content-width, var(--aligndefault-width) );
+    --responsive--alignwide-width: min($content-width, var(--alignwide-width) );
+    --form--border-width: #{ $form--border-width };
+    --form--border-color: #{ $form--border-color };
+    --form--color-text: #{ $form--color-text };
+}
+// @media (min-width: #{$mobile-width}) {
+//     :root {
+//         --responsive--aligndefault-width: min($content-width, var(--aligndefault-width) );
+//         --responsive--alignwide-width: min($content-width, var(--alignwide-width) );
+//     }
+// }
+// @media (min-width: #{$tablet-width}) {
+//     :root {
+//         --responsive--aligndefault-width: min($content-width, var(--aligndefault-width) );
+//         --responsive--alignwide-width: min($content-width, var(--alignwide-width) );
+//     }
+// }
+// @media (min-width: #{$desktop-width}) {
+//     :root {
+//         --responsive--aligndefault-width: min($content-width, var(--aligndefault-width) );
+//         --responsive--alignwide-width: min($content-width, var(--alignwide-width) );
+//     }
+// }
+// @media (min-width: #{$huge-width}) {
+//     :root {
+//         --responsive--aligndefault-width: min($content-width, var(--aligndefault-width) );
+//         --responsive--alignwide-width: min($content-width, var(--alignwide-width) );
+//     }
+// }

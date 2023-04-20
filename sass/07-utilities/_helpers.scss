@@ -1,0 +1,67 @@
+.list-reset,
+.list-reset ol,
+.list-reset ul,
+.list-reset li {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.mt-0 {
+    margin-top: 0!important;
+}
+.mr-0 {
+    margin-right: 0!important;
+}
+.mb-0 {
+    margin-bottom: 0!important;
+}
+.ml-0 {
+    margin-left: 0!important;
+}
+.mt-a {
+    margin-top: auto!important;
+}
+.mr-a {
+    margin-right: auto!important;
+}
+.mb-a {
+    margin-bottom: auto!important;
+}
+.ml-a {
+    margin-left: auto!important;
+}
+.pt-0 {
+    padding-top: 0!important;
+}
+.pr-0 {
+    padding-right: 0!important;
+}
+.pb-0 {
+    padding-bottom: 0!important;
+}
+.pl-0 {
+    padding-left: 0!important;
+}
+
+.flex {
+    display: flex;
+}
+.block {
+    display: block;
+}
+.relative {
+    position: relative;
+}
+
+
+form .double { // Добавить для мобильных !!! 
+    display: flex;
+    justify-content: space-between;
+    .half {
+        width: 50%;
+        overflow: auto;
+        float: left;
+        max-width: 48%;
+    }
+}

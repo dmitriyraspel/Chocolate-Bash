@@ -1,0 +1,20 @@
+
+.footer-navigation {
+    ul {
+        display: flex;
+        justify-content: center;
+        overflow-x: auto
+    }
+    li {
+        padding: 0.5em 1em;
+        min-width: max-content;
+    }
+    a {
+        text-decoration: none;
+        color: $footer--color-link;
+        
+        &:hover {
+            color: $footer--color-link;
+        }
+    }
+}

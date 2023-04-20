@@ -1,0 +1,51 @@
+.burger {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    &::before,
+    &::after,
+    .burger__inner {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        background: $primary-nav--color-link-mobile;
+    }
+    &::before {
+        left: 6px;
+        top: 11px;
+        transition: top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s;
+    }
+    .burger__inner {
+        left: 6px;
+        top: 17px;
+        transition: opacity 0.001s linear 0.5s;
+    }
+    &::after {
+        left: 6px;
+        top: 23px;
+        // transition: top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s;
+        transition: top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s;
+    }
+
+}
+
+// primary-navigation-open
+.primary-navigation-open {
+    .burger {
+        &::before {
+            top: 17px;
+            transform: rotate(45deg);
+            transition: top 0.25s ease-in-out 0.25s, transform 0.25s ease-out 0.5s;
+        }
+        .burger__inner {
+            opacity: 0;
+        }
+        &::after {
+            top: 17px;
+            transform: rotate(135deg);
+            transition: top 0.25s ease-in-out 0.25s, transform 0.25s ease-out 0.5s;
+        }       
+    }   
+}

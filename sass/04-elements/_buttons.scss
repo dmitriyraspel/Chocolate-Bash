@@ -1,0 +1,29 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	font-family: $button--font-family;
+	line-height: $button--line-height;
+	font-size: $button--font-size;
+	font-weight: $button--font-weight;
+	color: $button--color-text;
+	background: $button--color-background; 
+	border: $button--border;
+	border-radius: $button--border-radius;
+
+	padding: $button--padding-vertical $button--padding-horizontal;
+	transition: $base-transition;
+	
+	cursor: pointer;
+
+	&:hover {
+		color: $button--color-text-hover;
+		background: $button--color-background-hover;
+		border: $button--border-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $button--color-background-active;
+	}
+}
