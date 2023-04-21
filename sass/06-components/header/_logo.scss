@@ -1,38 +1,41 @@
 .site-branding {
-    max-width: calc( 100% - 50px);
+    display: block;
+
     .site-logo {
-        max-width: 180px;
-        max-height: 100px;
-        margin-right: 16px;
+        max-width: 178px;
+        max-height: 77px;
     }
+
     .custom-logo {
         width: auto;
         height: auto;
         max-width: 100%;
         max-height: 100%;
     }
+
     a {
         text-decoration: none;
         margin: 0;
-        color:  $branding--color-link;
+        color: $branding--color-link;
+        padding: 0;
     }
+
     a:hover,
     a:focus {
         color: $branding--color-link-hover;
+        outline: none;
     }
-    .site-title {
-        margin: 0 16px 0 0;
-        padding: 0;
-        font-size: $branding--title--font-size;
-        font-weight: $branding--title--font-weight;
-        max-width: 100%;
-     }
-     .site-description {
-        // display: none;
-        margin: 0 16px 0 0;
-        font-size: $branding--description--font-size;
-        // width: 100%;
-     }
-    
 }
-    
+
+@media (max-width: $breakpoint-nav) {
+    .site-branding {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .site-logo {
+            max-width: 35px;
+            max-height: 45px;
+        }
+    }
+}

@@ -54,6 +54,24 @@
     position: relative;
 }
 
+.bg-pink {
+    background: $pink;
+}
+.bg-brown {
+    background: $brown;
+}
+
+@media (max-width: $breakpoint-nav) {
+    .no-mobile {
+        display: none!important;
+    }
+}
+@media (min-width: $breakpoint-nav) {
+    .only-mobile {
+        display: none;           
+    }
+}
+
 
 form .double { // Добавить для мобильных !!! 
     display: flex;

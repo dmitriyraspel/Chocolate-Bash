@@ -1,9 +1,16 @@
+$pink: #E2D0D4;
+$brown: #462324;
+$blue: #7AC6D4;
+$white: #fff;
+$red: #EE202E;
+$gray: #F6F6F6;
+
 $color__accent: #e16a36;
 
 $global--color-background: #fff; /* Default body background */
 $global--color-background--alt: #f7f7f7;
-$global--color-primary: #666; /* Body text color. */
-$global--color-secondary: #111; /* Headings */
+$global--color-primary: #000 ; /* Body text color. */
+$global--color-secondary: #462324; /* Headings */
 $global--font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $global--font-secondary: $global--font-primary;
 
@@ -40,26 +47,26 @@ $link--font-family: $global--font-primary;
 
 
 // Buttons
-$button--color-text: #fff;
-$button--color-background: $color__accent;
+$button--color-text: $pink;
+$button--color-background: $brown;
 $button--font-family: inherit;
 $button--font-size: $global--font-size;
-$button--font-weight: $font__normal;
+$button--font-weight: bold;
 $button--line-height: 1.5;
 
-$button--border-width: 2px;
-$button--border: $button--border-width solid transparent;
+$button--border-width: 1px;
+$button--border: $button--border-width solid $pink;
 
-$button--border-radius: 6px;
-$button--padding-vertical: 8px;
-$button--padding-horizontal: 24px;
+$button--border-radius: 90px;
+$button--padding-vertical: 12px;
+$button--padding-horizontal: 32px;
 // Hover
-$button--color-text-hover: $button--color-background;
-$button--color-background-hover: #fff;
+$button--color-text-hover: $brown;
+$button--color-background-hover: $pink;
 $button--border-hover: $button--border-width solid $button--color-background;
 
-$button--color-text-active: var(--global--color-secondary);
-$button--color-background-active: $button--color-background;
+// $button--color-text-active: var(--global--color-secondary);
+// $button--color-background-active: $button--color-background;
 
 // Forms
 $form--font-family: inherit;
@@ -67,7 +74,7 @@ $form--line-height: 1.5;
 $form--font-size: $global--font-size;
 $form--font-weight: $font__normal;
 $form--color-text: $global--color-primary;
-$form--color-background: $global--color-background;
+$form--color-background: #F6F6F6;
 
 $form--border-width: 2px;
 $form--border-color: $global--color-primary;
@@ -103,28 +110,28 @@ $branding--description--font-family: $global--font-primary;
 $branding--description--font-size: 14px;
 
 // Breakpoint
-$breakpoint-nav: 767.88px;
+$breakpoint-nav: 999.88px;
 /* Main navigation */
 $primary-nav--font-family: $global--font-primary;
 $primary-nav--font-family-mobile: $primary-nav--font-family;
 $primary-nav--font-size: $global--font-size;
 $primary-nav--font-size-sub-menu: $global--font-size;
-$primary-nav--font-size-mobile: 20px;
+$primary-nav--font-size-mobile: 32px;
 // $primary-nav--font-size-sub-menu-mobile: 20px;
 // $primary-nav--font-style: 400;
-$primary-nav--font-weight: $font__normal;
-$primary-nav--font-weight-mobile: 700;
-$primary-nav--color-link: $global--color-primary;
-$primary-nav--color-link-hover: $global--color-secondary;
-$primary-nav--color-link-mobile: $global--color-secondary;
-$primary-nav--color-link-mobile-active: $global--color-primary;
+$primary-nav--font-weight: bold;
+$primary-nav--font-weight-mobile: bold;
+$primary-nav--color-link: $brown;
+$primary-nav--color-link-hover: $brown;
+$primary-nav--color-link-mobile: $brown;
+$primary-nav--color-link-mobile-active: $brown;
 $primary-nav--color-link-sub-menu: #999;
 $primary-nav--color-bg-sub-menu: #FFF;
 
 
 // Social Menu
-$social-nav--color-link: #1adf1a;
-$social-nav--color-link-hover: #1adf1a;
+$social-nav--color-link: $brown;
+$social-nav--color-link-hover: $brown;
 
 // Footer
 $footer--color-background: $global--color-background; 
@@ -151,7 +158,7 @@ $global--spacing-vertical: 30px; // 30px.
 // Containers
 $content-width: 88vw;
 $aligndefault-width: 720px;
-$alignwide-width: 1180px;
+$alignwide-width: 1174px;
 
 // Media queries
 $mobile-width: 581px !default; // Mobile

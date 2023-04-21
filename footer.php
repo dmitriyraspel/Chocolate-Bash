@@ -15,6 +15,9 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="footer__inner">
+
+			<?php get_sidebar() ?>
+
 			<?php
 				if ( has_nav_menu( 'footer' ) ) : ?>
 				<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Navigation', 'rspl_theme' ); ?>">
@@ -38,21 +41,6 @@
 			?>
 		</div><!-- .footer__inner -->
 		
-		<div class="site-info">
-			<span class="copyright">&copy; <?php echo esc_html( date_i18n( __( 'Y', 'rspl_theme' ) ) ); ?></span>
-			<?php
-			if ( function_exists( 'the_privacy_policy_link' ) ) {
-				the_privacy_policy_link();
-			}
-			?>
-			<span class="sep"> | </span>
-			<div class="theme-autor">
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( '%1$s by %2$s', 'rspl_theme' ), 'Chocolate-Bash', '<a href="https://raspel.ru/">Dmitriy Raspel</a>' );
-				?>
-			</div><!-- .theme-autor -->
-		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

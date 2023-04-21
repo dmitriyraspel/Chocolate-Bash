@@ -24,6 +24,13 @@ input[type="submit"] {
 
 	&:active,
 	&:focus {
-		border-color: $button--color-background-active;
+		// border-color: $button--color-background-active;
+	}
+
+	&.button_200 {
+		min-width: 200px;
+	}
+	&.button_100 {
+		width: 100%;
 	}
 }
