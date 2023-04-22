@@ -1363,24 +1363,44 @@ label {
   display: block;
 }
 
-.post,
-.page {
-  margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
   display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
 .page-links {
   clear: both;
-  margin: 0 0 1.5em;
+}
+
+.error-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error-404 .page-title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error-404 > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(88vw, 720px);
+}
+
+.error-404 > *:not(.alignfull) {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.error-404 > *:first-child:not(.alignfull) {
+  margin-top: 45px;
+}
+
+.error-404 > *:last-child:not(.alignfull) {
+  margin-bottom: 45px;
 }
 
 /* Comments
