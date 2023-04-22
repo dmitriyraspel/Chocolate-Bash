@@ -14,31 +14,26 @@
 </main><!-- #main -->
 
 	<footer id="colophon" class="site-footer">
+		<div class="footer__bg">
+			<img class="footer__bg-img only-mobile" src="<?php echo get_template_directory_uri() . '/assets/img/footer-bg-mobile.svg'?>" alt="footer-background">
+			<img class="footer__bg-img no-mobile" src="<?php echo get_template_directory_uri() . '/assets/img/footer-bg.svg'?>" alt="footer-background">
+		</div>
 		<div class="footer__inner">
 
-			<?php get_sidebar() ?>
+			<?php //get_sidebar() ?>
+			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
-			<?php
-				if ( has_nav_menu( 'footer' ) ) : ?>
-				<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Navigation', 'rspl_theme' ); ?>">
+			
+			<section class="widget manual">
+				<?php
+					if ( has_nav_menu( 'social' ) ) : ?>
+					<h4>Let’s Connect:</h4>
 					<?php
-					wp_nav_menu(
-						array(
-							'theme_location'	=> 'footer',
-							'menu_class'		=> 'footer-menu list-reset',
-							'depth'				=> 1,
-							'container'       => '',
-						)
-					);
+						get_template_part( 'template-parts/social-nav' );
+					endif; 
 					?>
-				</nav><!-- .footer-navigation -->
-			<?php endif; ?>
-
-			<?php
-			if ( has_nav_menu( 'social' ) ) : 
-				get_template_part( 'template-parts/social-nav' );
-			endif; 
-			?>
+			</section><!-- /.widget -->
+			
 		</div><!-- .footer__inner -->
 		
 	</footer><!-- #colophon -->

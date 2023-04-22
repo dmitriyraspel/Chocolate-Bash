@@ -515,6 +515,15 @@ dd {
   margin: 0 1.5em 1.5em;
 }
 
+.list-reset,
+.list-reset ol,
+.list-reset ul,
+.list-reset li {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -1127,7 +1136,6 @@ label {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -1156,24 +1164,6 @@ label {
 }
 .social-navigation ul a:hover, .social-navigation ul a:focus {
   transform: rotate(360deg);
-}
-
-.footer-navigation ul {
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
-}
-.footer-navigation li {
-  padding: 0.5em 1em;
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-.footer-navigation a {
-  text-decoration: none;
-  color: #462324;
-}
-.footer-navigation a:hover {
-  color: #462324;
 }
 
 /* Header
@@ -1498,7 +1488,8 @@ label {
 .site-footer {
   width: 100%;
   position: relative;
-  color: #000;
+  color: #462324;
+  overflow: hidden;
 }
 .site-footer .footer__inner {
   width: 88vw;
@@ -1506,42 +1497,219 @@ label {
   margin-left: auto;
   margin-right: auto;
 }
-.site-footer .site-info {
-  width: 88vw;
-  max-width: 1174px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  font-size: 14px;
+.site-footer .social-navigation ul {
+  justify-content: flex-start;
 }
-.site-footer .site-info .theme-autor {
-  display: inline-block;
+.site-footer .social-navigation li {
+  margin: 0;
+  margin-left: 4px;
 }
-.site-footer .site-info a {
-  text-decoration: none;
-  color: #462324;
+.site-footer .social-navigation li:first-child {
+  margin-left: 0;
 }
-.site-footer .site-info a:hover {
-  color: #1adf1a;
-}
-.site-footer .footer-navigation {
-  margin: 15px 0;
-}
-.site-footer .social-navigation {
-  margin: 15px 0;
+.site-footer .social-navigation a {
+  width: 24px;
+  height: 24px;
 }
 .site-footer .social-navigation svg {
-  fill: #333;
+  fill: #462324;
+}
+.site-footer .widget {
+  margin: 0;
+  padding: 0;
+}
+.site-footer h4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #462324;
+  margin-bottom: 4px;
+}
+.site-footer a,
+.site-footer a:hover,
+.site-footer a:focus {
+  text-decoration: none;
+  color: #462324;
+  font-weight: normal;
+}
+.site-footer p {
+  color: #462324;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 1.4em;
+}
+.site-footer .footer-widget-navigation ul,
+.site-footer .widget_nav_menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 14px;
+}
+.site-footer .footer-widget-navigation li,
+.site-footer .widget_nav_menu li {
+  min-width: -moz-max-content;
+  min-width: max-content;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .footer-widget-navigation a,
+.site-footer .widget_nav_menu a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #462324;
+  font-weight: bold;
+}
+.site-footer .footer-widget-navigation a:hover,
+.site-footer .widget_nav_menu a:hover {
+  color: #462324;
 }
 
-@media screen and (max-width: 600px) {
-  .site-footer .site-info .sep {
-    display: none;
+.footer__logo {
+  margin: 0;
+  max-width: 117px;
+  margin-bottom: 14px;
+}
+
+.footer__desc {
+  margin-top: 0;
+  font-size: 10px;
+  line-height: 13px;
+  margin-bottom: 1.4em;
+  max-width: 277px;
+}
+
+.footer__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.footer__bg:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  left: 0;
+  bottom: 0;
+  background: #E2D0D4;
+}
+
+.footer__bg-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 999.89px) {
+  .site-footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
   }
-  .site-footer .site-info .theme-autor {
+  .site-footer .footer-widget-navigation,
+  .site-footer .widget_nav_menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .site-footer p {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .site-footer {
+    padding-top: 70px;
+  }
+  .site-footer .footer__logo {
+    margin-bottom: 20px;
+    max-width: 150px;
+  }
+  .site-footer .footer-widget-navigation,
+  .site-footer .widget_nav_menu {
+    margin-bottom: 20px;
+  }
+  .site-footer .footer-widget-navigation ul,
+  .site-footer .widget_nav_menu ul {
+    display: flex;
+  }
+  .site-footer .footer-widget-navigation li,
+  .site-footer .widget_nav_menu li {
+    margin-right: 25px;
+  }
+  .site-footer .footer-widget-navigation a,
+  .site-footer .widget_nav_menu a {
+    font-size: 14px;
+  }
+  .site-footer p {
+    font-size: 14px;
+  }
+  .site-footer h4 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .site-footer {
+    padding-top: 80px;
+  }
+}
+@media screen and (min-width: 999.89px) {
+  .site-footer {
+    padding-top: 200px;
+    padding-bottom: 60px;
+  }
+  .site-footer .footer__bg:after {
+    height: 40%;
+  }
+  .site-footer .footer-widget-navigation ul,
+  .site-footer .widget_nav_menu ul {
     display: block;
+  }
+  .site-footer .footer-widget-navigation a,
+  .site-footer .widget_nav_menu a {
+    font-size: 16px;
+  }
+  .site-footer h4 {
+    font-size: 16px;
+  }
+  .site-footer .footer__desc {
+    font-size: 16px;
+  }
+  .site-footer p {
+    max-width: 300px;
+  }
+  .site-footer .social-navigation a {
+    width: 30px;
+    height: 30px;
+  }
+  .footer__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__inner .footer__logo {
+    max-width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .site-footer p {
+    max-width: 277px;
+  }
+  .footer__bg:after {
+    height: 50%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .site-footer .footer__inner {
+    justify-content: start;
+  }
+}
+@media screen and (min-width: 2400px) {
+  .site-footer .footer__bg:after {
+    height: 30%;
   }
 }
 /*
@@ -1591,15 +1759,6 @@ label {
 
 /* Helpers
 --------------------------------------------- */
-.list-reset,
-.list-reset ol,
-.list-reset ul,
-.list-reset li {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
 .mt-0 {
   margin-top: 0 !important;
 }
