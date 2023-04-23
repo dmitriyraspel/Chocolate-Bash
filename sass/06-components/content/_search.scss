@@ -1,0 +1,27 @@
+.search,
+.search-results {
+    .site-main {
+        min-height: 500px
+    }
+    .page-header {
+        @include container;
+    }
+    .page-title {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-size: 20px;
+        font-weight: bold;
+        @media (min-width: $breakpoint-nav) {
+            font-size: 55px;
+        }
+    }
+    .entry-title {
+        @media (max-width: $breakpoint-nav) {
+            font-size: 20px;
+        }
+    }
+    article {
+        @include container;
+    }
+
+}

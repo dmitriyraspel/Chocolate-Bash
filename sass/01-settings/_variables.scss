@@ -40,9 +40,10 @@ $heading--font-size-h1: 2.074em;
 $normal: 400; 
 
 // Links
-$color__link: $color__accent;
+$color__link: $brown;
 $color__link-visited: lighten($color__link, 8%);
 $color__link-hover: darken($color__link,8%);
+$link--font-weight: bold;
 $link--font-family: $global--font-primary;
 
 
