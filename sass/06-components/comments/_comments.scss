@@ -1,3 +1,31 @@
+.comments-area {
+	@include container;
+	margin-top: $global--spacing-vertical;
+	margin-bottom: $global--spacing-vertical;
+}
+.comments-title {
+	margin-bottom: 1em;
+}
+.comment-list {
+	list-style: none;
+}
+.comment-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&>* {
+		width: 100%;
+	}
+	.comment-form-author,
+	.comment-form-email {
+		@media screen and (min-width: 600px) {
+			width: 48%;
+		}
+	}
+	input {
+		max-width: 100%;
+	}
+}
 .comment-content a {
 	word-wrap: break-word;
 }

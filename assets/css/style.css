@@ -368,6 +368,7 @@ textarea {
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 1.3em;
 }
 
@@ -381,7 +382,7 @@ h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   line-height: 1.3;
   color: #462324;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 h1, h2, h3, h4 {
@@ -1114,7 +1115,12 @@ label {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-  margin: 0 0 1.5em;
+  width: 88vw;
+  max-width: 1174px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
@@ -1360,18 +1366,6 @@ label {
 
 /* Posts and pages
 --------------------------------------------- */
-.sticky {
-  display: block;
-}
-
-.updated:not(.published) {
-  display: none;
-}
-
-.page-links {
-  clear: both;
-}
-
 .error-404 {
   display: flex;
   flex-direction: column;
@@ -1442,8 +1436,64 @@ label {
   margin-right: auto;
 }
 
+.sticky {
+  display: block;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-links {
+  clear: both;
+}
+
+.entry-footer {
+  width: 88vw;
+  max-width: 1174px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 /* Comments
 --------------------------------------------- */
+.comments-area {
+  width: 88vw;
+  max-width: 1174px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.comments-title {
+  margin-bottom: 1em;
+}
+
+.comment-list {
+  list-style: none;
+}
+
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.comment-form > * {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .comment-form .comment-form-author,
+  .comment-form .comment-form-email {
+    width: 48%;
+  }
+}
+.comment-form input {
+  max-width: 100%;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }

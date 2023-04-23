@@ -1,0 +1,5 @@
+.entry-footer {
+    @include container;
+    margin-top: $global--spacing-vertical;
+    margin-bottom: $global--spacing-vertical;
+}
