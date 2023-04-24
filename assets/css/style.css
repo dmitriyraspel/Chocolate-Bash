@@ -41,6 +41,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /* Sections
@@ -362,7 +363,7 @@ select,
 optgroup,
 textarea {
   color: #000;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -379,7 +380,7 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.3;
   color: #462324;
   font-weight: bold;
@@ -548,7 +549,7 @@ table {
 
 a {
   color: #462324;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   text-decoration: none;
   font-weight: bold;
   transition: 0.7s;
@@ -966,7 +967,7 @@ label {
 .main-navigation a {
   text-decoration: none;
   position: relative;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   display: inline-block;
   color: #462324;
   font-weight: bold;
