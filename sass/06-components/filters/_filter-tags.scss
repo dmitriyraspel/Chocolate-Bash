@@ -1,0 +1,50 @@
+.filter-tags {
+    @include container;
+    margin-top: $global--spacing-vertical;
+    margin-bottom: $global--spacing-vertical;
+    color: $brown;
+    display: flex;
+    align-items: center;
+}
+.filter-tag__label {
+    font-size: 14px;
+}
+
+.filter-tag__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+
+    li {
+        background: transparentize($pink, 0.6);
+        
+        padding: 13px 28px;
+        border-radius: 90px;
+        margin-left: 20px;
+        
+
+        a,
+        a:hover,
+        a:focus {
+            text-decoration: none;
+            color: $brown;
+            line-height: 1;
+            font-size: 14px;
+            font-weight: $font__normal
+        }
+    }
+}
+@media screen and (max-width: 1270px) {
+    .filter-tag__list li {
+        padding: 10px 20px;
+        margin-left: 14px;
+        font-size: 12px;
+    }
+    .filter-tag__label,
+    .filter-tag__list li a {
+        font-size: 12px;
+    }
+
+}
