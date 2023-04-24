@@ -2,4 +2,8 @@
     @include container;
     margin-top: $global--spacing-vertical;
     margin-bottom: $global--spacing-vertical;
+
+    &>*:not(:last-child) {
+        margin-right: 1em;
+    }
 }
