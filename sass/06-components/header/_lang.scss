@@ -1,0 +1,99 @@
+.lang-wrap {
+    padding: 12px 14px;
+    background: rgba(246, 246, 246, 0.2);
+    color: $brown;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 280px;
+    max-width: 100%;
+
+    &__span {
+        position: relative;
+        font-size: 11px;
+        color: $brown;
+        line-height: 16px;
+        display: flex;
+        margin-right: 16px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.93277 17C13.3139 17 16.8655 13.4183 16.8655 9C16.8655 4.58172 13.3139 1 8.93277 1M8.93277 17C4.55162 17 1 13.4183 1 9M8.93277 17C11.1605 17 12.9664 13.4183 12.9664 9C12.9664 4.58172 11.1605 1 8.93277 1M8.93277 17C6.70507 17 4.89916 13.4183 4.89916 9C4.89916 4.58172 6.70507 1 8.93277 1M1 9C1 4.58172 4.55162 1 8.93277 1M1 9H17M3.95798 2.69492C3.95798 2.69492 9.22405 5.13559 13.9076 2.69492M13.9076 15.3051C13.9076 15.3051 8.6415 12.8644 3.95798 15.3051' stroke='%23462324'/%3e%3c/svg%3e");
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        @media screen and (max-width: 300px) {
+            flex-wrap: wrap;
+        }
+    }
+    li {
+        position: relative;
+        font-size: 12px;
+        font-weight: $font__bold;
+        background: $pink;
+        color: $brown;
+        line-height: 1;
+        padding: 5px 14px;
+        border-radius: 20px;
+        margin-right: 10px;
+        
+        &:last-child {
+            margin-right: 0;
+            background: $brown;
+            color: pink;
+        }
+    }
+
+    &__btn {
+        width: 45px;
+        height: 20px;
+        font-size: 12px;
+        border: none;
+        
+        &:first-child {
+            font-weight: $font__normal;
+            background-color: $pink;
+            color: $brown;
+        }
+
+    }
+}
+
+
+
+.site-header__extras {
+	text-align: center;
+	margin-bottom: 14px;
+
+	.lang-wrap {
+        @media (max-width: $breakpoint-nav) {
+            display: none;
+		}	
+	}
+}
+
+@media screen and (max-width: 355px) {
+    .lang-wrap {
+
+        &__span {
+            margin-right: 14px;
+        }
+        li {
+            margin-right: 8px;
+            padding: 4px 12px;
+        }
+    }
+}

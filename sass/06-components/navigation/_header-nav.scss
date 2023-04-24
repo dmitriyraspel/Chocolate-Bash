@@ -1,0 +1,33 @@
+.header-menu-container {
+    
+    @media screen and (max-width: $breakpoint-nav ) {
+        display: none;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        padding: 8px 16px;
+        position: relative;
+    }
+    a {
+        text-decoration: none;
+        position: relative;
+        font-family: $primary-nav--font-family;
+        display: inline-block;
+        color: $primary-nav--color-link;
+        font-weight: $primary-nav--font-weight;
+        transition: $base-transition;
+
+        font-size: $primary-nav--font-size;
+        &:hover,
+        &:focus {
+            color: $primary-nav--color-link-hover;
+        }
+    }
+
+
+}
+

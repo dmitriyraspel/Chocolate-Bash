@@ -1,5 +1,9 @@
 .site-branding {
     display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
     .site-logo {
         max-width: 178px;
@@ -24,18 +28,5 @@
     a:focus {
         color: $branding--color-link-hover;
         outline: none;
-    }
-}
-
-@media (max-width: $breakpoint-nav) {
-    .site-branding {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        .site-logo {
-            max-width: 35px;
-            max-height: 45px;
-        }
     }
 }

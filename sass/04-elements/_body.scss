@@ -3,7 +3,7 @@ body {
 	transition: $base-transition;
 }
 @media screen and (max-width: $breakpoint-nav ) {
-	body.primary-navigation-open {
+	body.mobile-navigation-open {
 		overflow: hidden;
 		
 		// .site-main,

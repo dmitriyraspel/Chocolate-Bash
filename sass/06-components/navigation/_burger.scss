@@ -30,9 +30,8 @@
     }
 
 }
-
-// primary-navigation-open
-.primary-navigation-open {
+// Mobile menu Open
+.mobile-navigation-open{
     .burger {
         &::before {
             top: 17px;

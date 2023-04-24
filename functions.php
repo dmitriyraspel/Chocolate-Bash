@@ -78,7 +78,8 @@ function rspl_theme_setup() {
 	// This theme uses wp_nav_menu() in 4 location.
 	register_nav_menus(
 		array(
-			'primary'	=> __( 'Primary Navigation', 'rspl_theme' ),
+			'header'	=> __( 'Header Navigation', 'rspl_theme' ),
+			'mobile'	=> __( 'Mobile Navigation', 'rspl_theme' ),
 			'social'	=> __( 'Social Links Navigation','rspl_theme' ),
 			'footer'	=> __( 'Footer Navigation', 'rspl_theme' ),
 		)
