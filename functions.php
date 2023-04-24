@@ -46,15 +46,6 @@ function rspl_theme_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'primary'	=> __( 'Primary Navigation', 'rspl_theme' ),
-			'social'	=> __( 'Social Links Navigation','rspl_theme' ),
-			'footer'	=> __( 'Footer Navigation', 'rspl_theme' ),
-		)
-	);
-
 	/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
@@ -72,35 +63,27 @@ function rspl_theme_setup() {
 		)
 	);
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'rspl_theme_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+	
+	// Add support for full and wide align images.
+	add_theme_support( 'align-wide' );
 
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support(
-		'custom-logo',
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+
+	$editor_stylesheet_path = './assets/css/style-editor.css';
+	add_editor_style ( $editor_stylesheet_path );
+
+	// This theme uses wp_nav_menu() in 4 location.
+	register_nav_menus(
 		array(
-			'height'      => 100,
-			'width'       => 180,
-			'flex-width'  => true,
-			'flex-height' => true,
+			'primary'	=> __( 'Primary Navigation', 'rspl_theme' ),
+			'social'	=> __( 'Social Links Navigation','rspl_theme' ),
+			'footer'	=> __( 'Footer Navigation', 'rspl_theme' ),
 		)
 	);
+
 }
 add_action( 'after_setup_theme', 'rspl_theme_setup' );
 
@@ -163,11 +146,6 @@ function rspl_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'rspl_theme_scripts' );
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -208,10 +186,3 @@ require get_template_directory() . '/inc/customizer.php';
 // if ( class_exists( 'WooCommerce' ) ) {
 // 	require get_template_directory() . '/inc/woocommerce.php';
 // }
-
-
-/*  DISABLE GUTENBERG STYLE IN HEADER| global-styles-inline-css */
-// function rspl_theme_global_styles_inline_css() {
-//     wp_dequeue_style( 'global-styles' );
-// }
-// add_action( 'wp_enqueue_scripts', 'rspl_theme_global_styles_inline_css', 100 );
