@@ -55,7 +55,7 @@
 			<?php // get_template_part('template-parts/header/site-branding'); ?>
 			<div class="site-branding">
 				<div class="site-logo">
-					<?php if ( is_front_page() && is_home() ) : ?>
+					<?php if ( is_front_page() || is_home() ) : ?>
 							<img src="<?php echo get_template_directory_uri() . '/assets/img/chocolate-bash-logo-mobile.png'?>" class="custom-logo only-mobile" alt="<?php bloginfo( 'name' ); ?>">
 							<img src="<?php echo get_template_directory_uri() . '/assets/img/chocolate-bash-logo.png'?>" class="custom-logo no-mobile" alt="<?php bloginfo( 'name' ); ?>">
 						<?php
