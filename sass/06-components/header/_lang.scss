@@ -39,37 +39,34 @@
             flex-wrap: wrap;
         }
     }
-    li {
-        position: relative;
+    a {
+        text-transform: uppercase;
         font-size: 12px;
-        font-weight: $font__bold;
+        font-weight: $font__normal;
         background: $pink;
         color: $brown;
         line-height: 1;
         padding: 5px 14px;
         border-radius: 20px;
-        margin-right: 10px;
-        
-        &:last-child {
-            margin-right: 0;
-            background: $brown;
-            color: pink;
-        }
-    }
-
-    &__btn {
         width: 45px;
-        height: 20px;
-        font-size: 12px;
-        border: none;
+        display: block;
+        text-align: center;
+    }
+    li {
+        position: relative;
         
         &:first-child {
-            font-weight: $font__normal;
-            background-color: $pink;
-            color: $brown;
+            margin-right: 10px;
+            
         }
-
+        &.current-lang {
+            a {
+                background: $brown;
+                color: pink;
+            }
+        }
     }
+    
 }
 
 
@@ -92,8 +89,41 @@
             margin-right: 14px;
         }
         li {
-            margin-right: 8px;
+            &:first-child {
+                margin-right: 8px;
+            }
+        }
+        a {
             padding: 4px 12px;
+            width: 42px;
+        }
+    }
+}
+
+
+body.rtl {
+    .lang-wrap {
+
+        li {
+            &:first-child {
+                margin-left: 10px;
+                margin-right: 0;
+                @media screen and (max-width: 355px) {
+                    margin-left: 8px;
+                }
+            }
+        }
+        &__span {
+            margin-right: 0;
+            margin-left: 16px;
+            @media screen and (max-width: 355px) {
+                margin-left: 14px;
+            }
+            
+            &::before {
+                margin-right: 0;
+                margin-left: 5px;
+            }
         }
     }
 }

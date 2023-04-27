@@ -1209,32 +1209,28 @@ label {
     flex-wrap: wrap;
   }
 }
-.lang-wrap li {
-  position: relative;
+.lang-wrap a {
+  text-transform: uppercase;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   background: #E2D0D4;
   color: #462324;
   line-height: 1;
   padding: 5px 14px;
   border-radius: 20px;
+  width: 45px;
+  display: block;
+  text-align: center;
+}
+.lang-wrap li {
+  position: relative;
+}
+.lang-wrap li:first-child {
   margin-right: 10px;
 }
-.lang-wrap li:last-child {
-  margin-right: 0;
+.lang-wrap li.current-lang a {
   background: #462324;
   color: pink;
-}
-.lang-wrap__btn {
-  width: 45px;
-  height: 20px;
-  font-size: 12px;
-  border: none;
-}
-.lang-wrap__btn:first-child {
-  font-weight: 400;
-  background-color: #E2D0D4;
-  color: #462324;
 }
 
 .site-header__extras {
@@ -1251,11 +1247,37 @@ label {
   .lang-wrap__span {
     margin-right: 14px;
   }
-  .lang-wrap li {
+  .lang-wrap li:first-child {
     margin-right: 8px;
+  }
+  .lang-wrap a {
     padding: 4px 12px;
+    width: 42px;
   }
 }
+body.rtl .lang-wrap li:first-child {
+  margin-left: 10px;
+  margin-right: 0;
+}
+@media screen and (max-width: 355px) {
+  body.rtl .lang-wrap li:first-child {
+    margin-left: 8px;
+  }
+}
+body.rtl .lang-wrap__span {
+  margin-right: 0;
+  margin-left: 16px;
+}
+@media screen and (max-width: 355px) {
+  body.rtl .lang-wrap__span {
+    margin-left: 14px;
+  }
+}
+body.rtl .lang-wrap__span::before {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
 .site-header {
   width: 100%;
   max-width: 100%;
@@ -1297,6 +1319,7 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*rtl:ignore*/
 }
 @media (max-width: 999.88px) {
   .header__inner {
@@ -1330,6 +1353,10 @@ label {
   z-index: -1;
   background: #E2D0D4;
   border-radius: 0 0 20px 20px;
+}
+
+body.rtl .header__inner {
+  flex-direction: row-reverse;
 }
 
 /* Posts and pages
@@ -1398,6 +1425,14 @@ label {
 }
 .search article,
 .search-results article {
+  width: 88vw;
+  max-width: 1174px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-results,
+.not-found {
   width: 88vw;
   max-width: 1174px;
   margin-left: auto;
@@ -1966,6 +2001,14 @@ label {
     display: none;
   }
 }
+body:not(.rtl) .only-ar {
+  display: none;
+}
+
+body.rtl .no-ar {
+  display: none;
+}
+
 form .double {
   display: flex;
   justify-content: space-between;
