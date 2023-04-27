@@ -10,8 +10,9 @@
 @import "01-settings/global";
 
 // Import Tools
-@import "02-tools/columns";
+// @import "02-tools/columns";
 @import "02-tools/mixins";
+
 
 /* Normalize
 --------------------------------------------- */
@@ -23,7 +24,7 @@
 
 // @import "03-generic/base";
 
-// @import "03-generic/containers";
+@import "03-generic/containers";
 
 // Import Elements
 	// @import "04-elements/custom-scroll";
@@ -68,6 +69,7 @@
 
 // Filters
 @import "06-components/filters/filter-tags";
+
 
 /* Comments
 --------------------------------------------- */

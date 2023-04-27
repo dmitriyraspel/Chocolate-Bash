@@ -148,27 +148,31 @@ $color__background-ins: #f7f7f7;
 $filter__color-bg: transparentize($pink, 0.6);
 
 
-// Spacing
-// $baseline-unit: 10px;
-// $global--spacing-unit: #{2 * $baseline-unit}; // 20px
-$global--spacing-horizontal: 16px; // 25px
-$global--spacing-vertical: 30px; // 30px.
-// $spacing-horizontal: 15px;
-// $spacing-vertical: 20px;
-// $block-spacing-vertical: 1.5em;
+
+$global--spacing-horizontal: 15px;
+$global--spacing-vertical: 30px;
+
+$grid-gap: 30px !default;
+$grid-gap-side: $grid-gap / 2;
+$grid-columns: 12 !default;
 
 // Containers
 $content-width: 88vw;
 $aligndefault-width: 720px;
 $alignwide-width: 1174px;
 
+// Media queries
+$grid-breakpoints: (
+    xs: 0,
+    sm: 600px,
+    md: 767px,
+    lg: 999.84px,
+    xl: 1200px,
+    xxl: 1400px
+) !default;
+
 // Breakpoint
 $breakpoint-nav: 999.84px;
-// Media queries
-$mobile-width: 581px !default; // Mobile
-$tablet-width: 769px !default; // Tablets
-$desktop-width: 1281px !default; // Desktops & Laptops
-$huge-width: 1600px !default; // Large Desktops
 
 
 // Other Variables

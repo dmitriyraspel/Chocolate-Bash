@@ -1,22 +1,33 @@
 .container{
-	width: $content-width;
-	max-width: $alignwide-width;
-	margin: 0 auto;
 	position: relative;
+	@include container;
 }
 .container-text {
-	width: var(--responsive--aligndefault-width);
-	max-width: var(--aligndefault-width);
-	margin-left: auto;
-	margin-right: auto;
+	@include container-text;
 }
 .row {
-	display: block;
-	width: 100%;
-	clear: both;
+	@include row;
 }
 .half {
 	width: 50%;
 	overflow: auto;
     float:left;
 }
+
+// For classes
+
+// @for $i from 1 through $grid-columns {
+//     .col-#{$i} {
+//         @include col($i);
+//     }
+// }
+
+// @each $bp, $width in $grid-breakpoints {
+// 	@include media($width) {
+// 		@for $i from 1 through $grid-columns {
+// 			.col-#{$bp}-#{$i} {
+// 				@include col($i);
+// 			}
+// 		}
+// 	}
+// }

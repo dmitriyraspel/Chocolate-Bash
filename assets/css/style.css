@@ -356,6 +356,38 @@ html {
   box-sizing: border-box;
 }
 
+.container {
+  position: relative;
+  width: 88vw;
+  max-width: 1174px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-text {
+  width: 88vw;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row > * {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.half {
+  width: 50%;
+  overflow: auto;
+  float: left;
+}
+
 body,
 button,
 input,
@@ -847,14 +879,14 @@ label {
   /*rtl:ignore*/
   float: left;
   /*rtl:ignore*/
-  margin-right: 16px;
+  margin-right: 15px;
 }
 
 .alignright {
   /*rtl:ignore*/
   float: right;
   /*rtl:ignore*/
-  margin-left: 16px;
+  margin-left: 15px;
 }
 
 .aligncenter {
@@ -2013,13 +2045,16 @@ body.rtl .no-ar {
   display: none;
 }
 
-form .double {
+form.double {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-form .double .half {
-  width: 50%;
-  overflow: auto;
-  float: left;
-  max-width: 48%;
+@media (min-width: 600px) {
+  form.double .half {
+    width: 50%;
+    overflow: auto;
+    float: left;
+    max-width: 48%;
+  }
 }
