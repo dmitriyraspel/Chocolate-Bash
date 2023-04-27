@@ -469,7 +469,7 @@ body {
   transition: 0.7s;
 }
 
-@media screen and (max-width: 999.88px) {
+@media screen and (max-width: 999.84px) {
   body.mobile-navigation-open {
     overflow: hidden;
   }
@@ -945,7 +945,7 @@ label {
   transition: top 0.25s ease-in-out 0.25s, transform 0.25s ease-out 0.5s;
 }
 
-@media screen and (max-width: 999.88px) {
+@media screen and (max-width: 999.84px) {
   .header-menu-container {
     display: none;
   }
@@ -1071,7 +1071,7 @@ label {
   overflow: auto;
 }
 
-@media screen and (min-width: 999.88px) {
+@media screen and (min-width: 999.84px) {
   .mobile-nav-toggle {
     display: none;
   }
@@ -1237,7 +1237,7 @@ label {
   text-align: center;
   margin-bottom: 14px;
 }
-@media (max-width: 999.88px) {
+@media (max-width: 999.84px) {
   .site-header__extras .lang-wrap {
     display: none;
   }
@@ -1304,7 +1304,7 @@ body.rtl .lang-wrap__span::before {
 .site-header::after {
   clear: both;
 }
-@media (max-width: 999.88px) {
+@media (max-width: 999.84px) {
   .site-header {
     background: #E2D0D4;
     height: 63px;
@@ -1321,7 +1321,7 @@ body.rtl .lang-wrap__span::before {
   align-items: center;
   /*rtl:ignore*/
 }
-@media (max-width: 999.88px) {
+@media (max-width: 999.84px) {
   .header__inner {
     height: 100%;
   }
@@ -1334,7 +1334,7 @@ body.rtl .lang-wrap__span::before {
   padding: 8px 12px;
   font-weight: bold;
 }
-@media (min-width: 999.88px) {
+@media (min-width: 999.84px) {
   .site-header__cta-button {
     font-size: 12px;
     min-width: 240px;
@@ -1411,13 +1411,13 @@ body.rtl .header__inner {
   font-size: 20px;
   font-weight: bold;
 }
-@media (min-width: 999.88px) {
+@media (min-width: 999.84px) {
   .search .page-title,
   .search-results .page-title {
     font-size: 55px;
   }
 }
-@media (max-width: 999.88px) {
+@media (max-width: 999.84px) {
   .search .entry-title,
   .search-results .entry-title {
     font-size: 20px;
@@ -1766,7 +1766,7 @@ body.rtl .header__inner {
   width: 100%;
 }
 
-@media screen and (max-width: 999.89px) {
+@media screen and (max-width: 999.84px) {
   .site-footer {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -1816,7 +1816,7 @@ body.rtl .header__inner {
     padding-top: 80px;
   }
 }
-@media screen and (min-width: 999.89px) {
+@media screen and (min-width: 999.84px) {
   .site-footer {
     padding-top: 200px;
     padding-bottom: 60px;
@@ -1995,12 +1995,12 @@ body.rtl .site-footer .footer__inner {
   background: #462324;
 }
 
-@media (max-width: 999.88px) {
+@media (max-width: 999.84px) {
   .no-mobile {
     display: none !important;
   }
 }
-@media (min-width: 999.88px) {
+@media (min-width: 999.84px) {
   .only-mobile {
     display: none;
   }

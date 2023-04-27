@@ -112,8 +112,6 @@ $branding--title--font-weight: 400;
 $branding--description--font-family: $global--font-primary;
 $branding--description--font-size: 14px;
 
-// Breakpoint
-$breakpoint-nav: 999.88px;
 /* Main navigation */
 $primary-nav--font-family: $global--font-primary;
 $primary-nav--font-family-mobile: $primary-nav--font-family;
@@ -164,6 +162,8 @@ $content-width: 88vw;
 $aligndefault-width: 720px;
 $alignwide-width: 1174px;
 
+// Breakpoint
+$breakpoint-nav: 999.84px;
 // Media queries
 $mobile-width: 581px !default; // Mobile
 $tablet-width: 769px !default; // Tablets
