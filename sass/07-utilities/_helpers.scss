@@ -63,6 +63,17 @@
     }
 }
 
+body:not(.rtl) {
+    .only-ar {
+        display: none;
+    }
+}
+body.rtl {
+    .no-ar {
+        display: none;
+    }
+}
+
 
 form .double { // Добавить для мобильных !!! 
     display: flex;
