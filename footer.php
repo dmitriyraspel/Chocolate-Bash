@@ -27,7 +27,7 @@
 			<section class="widget manual">
 				<?php
 					if ( has_nav_menu( 'social' ) ) : ?>
-					<h4>Let’s Connect:</h4>
+					<h4><?php __( 'Let’s Connect:', 'rspl_theme' ); ?></h4>
 					<?php
 						get_template_part( 'template-parts/social-nav' );
 					endif; 

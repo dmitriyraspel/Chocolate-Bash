@@ -238,3 +238,9 @@
         height: 30%;
     }
 }
+
+body.rtl {
+    .site-footer .footer__inner {
+        flex-direction: row-reverse;
+    }
+}
