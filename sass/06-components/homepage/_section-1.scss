@@ -1,0 +1,134 @@
+.hpsection-1 {
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
+    background: #E8DADD;
+    
+
+    &>* {
+        z-index: 1;
+        position: relative;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        z-index: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='337' height='294' viewBox='0 0 337 294' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-64.5821 142.713C-61.138 107.844 -43.1657 75.6278 -19.2666 50.5013C4.63252 25.3831 34.2243 6.71814 64.6101 -9.41073C106.933 -31.8756 153.243 -50.2811 200.782 -47.7701C248.313 -45.2592 297.031 -17.3287 312.479 28.7813C323.254 60.9386 316.725 96.787 304.161 128.333C283.622 179.9 331.722 256.192 283.815 282.516C235.916 308.839 92.1037 284.181 40.9952 265.617C-10.1132 247.052 -70.6174 203.763 -64.5821 142.713Z' fill='white' fill-opacity='0.22'/%3e%3c/svg%3e");
+    }
+    &::before {
+        width: 400px;
+        height: 350px;
+        bottom: calc(100% - 230px);
+        // top: -20px;
+        left: -70px;
+        
+        @include media(lg) {
+            width: 1050px;
+            height: 950px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: -240px;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='707' height='798' viewBox='0 0 707 798' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-346.684 381.297C-337.198 285.254 -287.695 196.519 -221.867 127.311C-156.04 58.1254 -74.5331 6.71487 9.16132 -37.7103C125.735 -99.5873 253.291 -150.283 384.232 -143.367C515.15 -136.451 649.337 -59.5193 691.887 67.4853C721.565 156.059 703.583 254.799 668.977 341.69C612.406 483.726 744.889 693.863 612.935 766.368C481.004 838.873 84.8892 770.956 -55.8832 719.822C-196.656 668.688 -363.308 549.453 -346.684 381.297Z' fill='white' fill-opacity='0.22'/%3e%3c/svg%3e ");
+        }
+    }
+    &::after {
+        width: 768px;
+        height: 655px;
+        bottom: 50px;
+        left: 0;
+        // right: -328px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='414' height='656' viewBox='0 0 414 656' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-23.199 365.521C-16.5982 298.691 17.8478 236.945 63.6528 188.788C109.458 140.646 166.174 104.873 224.411 73.9603C305.527 30.904 394.286 -4.372 485.399 0.440557C576.497 5.25311 669.869 58.7848 699.477 147.159C720.128 208.792 707.615 277.499 683.535 337.961C644.171 436.795 736.358 583.016 644.539 633.468C552.737 683.919 277.105 636.66 179.151 601.079C81.1962 565.498 -34.7664 482.53 -23.199 365.521Z' fill='white' fill-opacity='0.22'/%3e%3c/svg%3e");
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        
+        @media screen and (max-width: 767.88px) {
+            justify-content: center;
+        }
+    }
+    &__item {
+        position: relative;
+        width: 360px;
+        max-width: 100%;
+        border-radius: 11px;
+        overflow: hidden;
+
+        @media screen and (min-width: 767.88px) {
+            max-width: calc(50% - 15px);
+        }
+        @media screen and (min-width: $breakpoint-nav) {
+            max-width: calc((100%/3) - 15px);
+
+        }
+
+        &:nth-child(2) {
+            @media screen and (max-width: 767.88px) {
+                display: none;
+            }
+        }
+        &:nth-child(3) {
+            @media screen and (max-width: $breakpoint-nav) {
+                display: none;
+            }
+        }
+
+        &-img {
+            object-fit: contain;
+        }
+        &-title {
+            display: none; // !!!
+            position: absolute;
+            left: calc(50%);
+            transform: translate(-50%, 0px);
+            font-size: 45px;
+            font-weight: bold;
+
+            &:not(.hpsection-1__item-title-top) {
+                bottom: 31px;
+            }
+            &.hpsection-1__item-title-top {
+                top: 7px;
+            }
+        }
+    }
+    &__desc {
+        margin-top: 120px;
+        padding-bottom: 80px;
+        @media screen and (max-width: $breakpoint-nav) {
+            background: $pink;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-top: 80px;
+        }
+        
+        &>div {
+            @media screen and (min-width: $breakpoint-nav) {
+                display: flex;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0;
+            margin-top: 10px;
+        }
+        &-title {
+            font-size: 30px;
+            line-height: 30px;
+            margin: 0;
+            margin-top: 10px;
+            @media screen and (min-width: $breakpoint-nav) {
+                max-width: 250px;
+                margin-right: 120px;
+            }
+        }
+    }
+   
+}

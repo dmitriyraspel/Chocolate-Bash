@@ -135,8 +135,16 @@ function rspl_theme_scripts() {
 
 	wp_enqueue_script( 'rspl_theme-navigation-dev', get_template_directory_uri() . '/assets/js/navigation.js', array(), filemtime(get_template_directory() . '/assets/js/navigation.js'), true );
 	
+	wp_register_script('itc-slider', get_template_directory_uri() . '/assets/js/itc-slider.js', array(), 3, true);
+	wp_register_script( 'front-slider', get_template_directory_uri() . '/assets/js/front-slider.js', array('itc-slider'), filemtime(get_template_directory() . '/assets/js/front-slider.js'), true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if ( is_front_page() ) {
+		wp_enqueue_script( 'itc-slider' );
+		wp_enqueue_script( 'front-slider' );
 	}
 
 	// Disable global-styles

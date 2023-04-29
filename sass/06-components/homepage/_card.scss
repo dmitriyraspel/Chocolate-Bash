@@ -1,0 +1,129 @@
+.slider__card {
+    position: relative;
+    // width: $content-width;
+    width: 353px;
+    padding-top: 80px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    // @include media(lg) {
+    //     padding-top: 10px;
+    //     display: flex;
+    //     width: 100%;
+    // }
+}
+.card__info {
+    @include media(lg) {
+        width: 730px;
+        max-width: 65%;
+    }
+}
+.card__title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin: 0;
+    @include media(lg) {
+        top: 0;
+        position: relative;
+        @include font(21, 53);
+        font-weight: $font__bold;
+    }
+}
+.card__img {
+    position: relative;
+    text-align: center;
+    width: 360px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+    @include media(lg) {
+        width: 400px;
+        margin: 0;
+    }
+
+    img {
+        // border-radius: 50%;
+        // overflow: hidden;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 85%;
+        height: 85%;
+        transform: translate(-55%, -50%);
+        // background-image: url(http://localhost/test-temp/wp-content/uploads/2023/04/frame-98.png);
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='320' height='320' viewBox='0 0 320 320' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_206_168)'%3e%3cpath opacity='0.61' d='M275.802 74.3437C294.445 95.8674 307.697 116.499 313.807 141.093C320.001 166.021 318.404 190.312 306.288 213.151C286.205 251.009 257.082 279.993 219.048 299.972C199.988 309.984 179.809 311.97 159.016 308.269C135.987 304.169 114.574 296.145 95.3769 282.142C86.323 275.537 75.0171 272.01 66.0142 265.349C23.4748 233.888 -0.49432 191.964 3.39398 138.422C7.61797 80.2704 57.9911 23.5906 114.44 8.87238C150.469 -0.517899 183.868 6.93576 215.432 24.9134C239.346 38.5325 259.72 56.6116 275.802 74.3437Z' fill='%23E2D0D4'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_206_168'%3e%3crect width='320' height='320' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        @include media(lg) {
+            width: 90%;
+            height: 90%;
+            transform: translate(-51%, -50%);
+        }
+    }   
+}
+.card__button {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1;
+    color: $brown;
+    background: $pink;
+    font-weight: $font__bold;
+.itc-slider__item_active & ,
+    &:hover,
+    &:focus {
+        background: $brown;
+        color: $pink;
+    }
+
+    @include media(lg) {
+        width: 200px;
+    }
+}
+
+//
+@include media(lg) {
+    .slider__card {
+        padding-top: 0px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-bottom: -50px;
+    }
+    .slider__card-1,
+    .slider__card-3 {
+        .card__info {
+            order: 1;
+        }
+        .card__img {
+            order: 2;
+        }
+    }
+    .slider__card-1 {
+        margin-top: 24px;
+    }
+    .slider__card-2 {
+        // margin-top: -50px;
+        // align-items: center;
+    }
+    .slider__card-3 {
+        // margin-top: -50px;
+        // align-items: center;
+    }
+    .slider__card-4 {
+        margin-bottom: 30px;
+        .card__info {
+            margin-top: -20px;
+        }
+    }
+}
+    

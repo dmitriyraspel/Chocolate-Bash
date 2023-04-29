@@ -1,0 +1,94 @@
+$bp__cta: 719.88px;
+.home-cta {
+    // background: $brown;
+    padding-top: 50px;
+    // background-color: $pink;
+    overflow: hidden;
+    margin-top: $global--spacing-vertical;
+    margin-bottom: $global--spacing-vertical;
+
+    @include max-width($bp__cta) {
+        background-color: $pink;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        @include min-width($bp__cta) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__info {
+        z-index: 2;
+    }
+    &__title {
+        @include font(30, 30);
+        font-weight: $font__bold;
+        margin-bottom: 24px;
+        width: 360px;
+
+        @include min-width($bp__cta) {
+            color: $pink;
+            font-size: 40px;
+            line-height: 1;
+            max-width: 100%;
+        }
+    }
+    &__btn {
+        color: $pink;
+        background: $brown;
+        font-size: 14px;
+        text-align: center;
+        width: 353px;
+        max-width: 100%;
+        margin-bottom: 60px;
+        border: none;
+        @include min-width($bp__cta) {
+            background-color: $pink;
+            color: $brown;
+            width: 254px;
+        }
+    }
+    &__img {
+        position: relative;
+        width: 340px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include min-width($bp__cta) {
+            width: 720px;
+            max-width: 45%;
+            margin: 0;
+        }
+
+        img {
+            position: relative;
+            z-index: 2;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 200vw;
+            left: -100vw;
+            z-index: 0;
+            @include min-width($bp__cta) {
+                top: 50%;
+                background-color: $brown;
+                height: 78%;
+                max-height: 380px;
+                transform: translate(0px, -50%);
+                
+            }
+            @include max-width($bp__cta) {    
+                height: 50%;
+                bottom: 0;
+                background-color: #fff;
+            }
+        }
+    }
+}
