@@ -142,10 +142,10 @@ function rspl_theme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( is_front_page() ) {
+	// if ( is_front_page() ) {
 		wp_enqueue_script( 'itc-slider' );
 		wp_enqueue_script( 'front-slider' );
-	}
+	// }
 
 	// Disable global-styles
 	if ( get_theme_mod('disable-global-styles') ) {

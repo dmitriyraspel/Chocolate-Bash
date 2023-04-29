@@ -22,7 +22,7 @@
 --------------------------------------------- */
 @import "03-generic/box-sizing";
 
-// @import "03-generic/base";
+@import "03-generic/base";
 
 @import "03-generic/containers";
 
@@ -67,10 +67,15 @@
 @import "06-components/content/posts-and-pages";
 @import "06-components/content/entry-footer";
 
+// Slider
+@import "06-components/itc-slider";
+
 // Filters
 @import "06-components/filters/filter-tags";
 // Homepage
 @import "06-components/homepage/homepage";
+// Story page
+@import "06-components/story/story";
 
 /* Comments
 --------------------------------------------- */

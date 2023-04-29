@@ -44,11 +44,18 @@ $bp__cta: 719.88px;
         width: 353px;
         max-width: 100%;
         margin-bottom: 60px;
-        border: none;
+        border: 1px solid $brown;
         @include min-width($bp__cta) {
             background-color: $pink;
             color: $brown;
             width: 254px;
+        }
+
+        &:hover,
+        &:focus {
+            background: $brown;
+            color: $pink;
+            border: 1px solid $pink;
         }
     }
     &__img {

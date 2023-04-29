@@ -8,7 +8,13 @@
  *
  * @package rspl_base
  */
-
+$has_header_nav = has_nav_menu( 'header' );
+$has_mobile_nav = has_nav_menu( 'mobile' );
+$template_story = is_page_template( 'templates/template-story.php' );
+$wrapper_classes  = 'site-header';
+$wrapper_classes .= $has_header_nav ? ' has-menu-header' : '';
+$wrapper_classes .= $has_mobile_nav ? ' has-menu-mobile' : '';
+$wrapper_classes .= $template_story ? ' --absolute' : '';
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -25,7 +31,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'rspl_theme' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="<?php echo $wrapper_classes; ?>">
 		<div class="header__inner">
 
 		<div id="mobileNavToggle" class="mobile-nav-toggle">
