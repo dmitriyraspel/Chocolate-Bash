@@ -501,6 +501,10 @@ body {
   transition: 0.7s;
 }
 
+.site-main {
+  overflow-x: hidden;
+}
+
 @media screen and (max-width: 999.84px) {
   body.mobile-navigation-open {
     overflow: hidden;
@@ -1731,6 +1735,7 @@ body.rtl .header__inner {
 .site-footer p {
   color: #462324;
   font-size: 14px;
+  line-height: 1.25;
   font-weight: normal;
   margin: 0;
   margin-bottom: 1.4em;
@@ -2045,16 +2050,13 @@ body.rtl .no-ar {
   display: none;
 }
 
-form.double {
+form .double {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
-@media (min-width: 600px) {
-  form.double .half {
-    width: 50%;
-    overflow: auto;
-    float: left;
-    max-width: 48%;
-  }
+form .double .half {
+  width: 50%;
+  overflow: auto;
+  float: left;
+  max-width: 48%;
 }
