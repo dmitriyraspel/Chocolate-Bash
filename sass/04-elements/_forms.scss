@@ -23,14 +23,17 @@ textarea {
 	background: $form--color-background;
 	border: $form--border;
 	border-radius: $form--border-radius;
-  // width: 100%;
+  width: 100%;
 	padding: $form--padding-vertical $form--padding-horizontal;
 	transition: $base-transition;
 
-	&:focus {
-		color: $form--color-text-focus;
-		background: $form--color-background-focus;
-		border-color: $color__accent;
+	&:focus,
+  &:focus-visible {
+    // border: $form--border;
+    outline: transparent;
+		// color: $form--color-text-focus;
+		// background: $form--color-background-focus;
+		border-color: $form--border-color-focus;
 	}
 	&:disabled {
 		opacity: 0.7;
@@ -65,9 +68,9 @@ label {
       margin-bottom: 3px;
       display: block;
       text-align: left;
-      color: #666;
+      color: $form--label-color;
       font-size: $form--label-font-size;
-      padding-left: 10pt;
+      // padding-left: 10pt;
 }
 
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {

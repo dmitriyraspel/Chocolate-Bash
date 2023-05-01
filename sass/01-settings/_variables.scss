@@ -74,18 +74,18 @@ $button--border-hover: $button--border-width solid $button--color-background;
 
 // Forms
 $form--font-family: inherit;
-$form--line-height: 1.5;
-$form--font-size: $global--font-size;
-$form--font-weight: $font__normal;
-$form--color-text: $global--color-primary;
-$form--color-background: #F6F6F6;
+$form--line-height: 1;
+$form--font-size: 16px;
+$form--font-weight: 400;
+$form--color-text: $brown;
+$form--color-background: #F7F7F7;
 
-$form--border-width: 2px;
-$form--border-color: $global--color-primary;
+$form--border-width: 1px;
+$form--border-color: transparent;
 $form--border: $form--border-width solid $form--border-color;
-$form--border-radius: 6px;
+$form--border-radius: 30px;
 
-$form--padding-vertical: 8px;
+$form--padding-vertical: 13px;
 $form--padding-horizontal: 24px;
 
 $form--checkbox-color: $form--border-color;
@@ -93,12 +93,13 @@ $form--checkbox-color-active: $color__accent;
 $form--checkbox-color-disabled: #F6F8FF;
 $form--checkbox-color-disabled-inner: #E1E6F9;
 
+$form--label-color: #000;
 $form--label-weight: $font__normal;
-$form--label-font-size: $global--font-size * 0.9;
+$form--label-font-size: 14px;
 // Focus
 $form--color-text-focus: $global--color-secondary;
 $form--color-background-focus: $global--color-background;
-$form--border-color-focus: $color__accent;
+$form--border-color-focus: $pink;
 
 
 /* Header */
