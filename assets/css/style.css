@@ -2540,6 +2540,7 @@ body.home .site-header {
 }
 .contact-footer .contact-footer__map {
   position: relative;
+  cursor: pointer;
 }
 @media (min-width: 782px) {
   .contact-footer .contact-footer__map {

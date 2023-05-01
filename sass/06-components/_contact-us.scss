@@ -66,6 +66,7 @@
 
     & .contact-footer__map {
         position: relative;
+        cursor: pointer;
 
         @include min-width(782px) {
             flex-basis: 60%;
@@ -247,4 +248,7 @@ input[type=range].slide-to-submit::-moz-range-thumb {
         margin-top: 20px;
         border-radius: 30px;
     }
+}
+.close-parent-link {
+    cursor: pointer;
 }
