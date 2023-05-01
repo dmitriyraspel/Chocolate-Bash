@@ -1,11 +1,35 @@
+// For slider !!!
+.itc-slider,
+.hpslider {
+    @include max-width(600px) {
+        max-height: 800px;
+        overflow: hidden;
+    }
+}
 
 .hpsection-2 {
+
+    .itc-slider__wrapper {
+        @include max-width(768px) {
+            max-height: 800px;
+            overflow: hidden;
+        }   
+    }
 
     .itc-slider__items {
         @include media(lg) {
             flex-direction: column;
         }
     }
+
+    .itc-slider__item {
+        @include min-width(768px) {
+            // flex: 0 0 48%;
+        }
+        
+    }
+
+
     /* индикаторы */
     .itc-slider__indicators {
         position: relative;
@@ -98,5 +122,4 @@
     }
 }
 
-
-.slider_mobile {}
+.--slider--active {}

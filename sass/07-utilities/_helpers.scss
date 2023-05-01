@@ -78,10 +78,11 @@ body.rtl {
 form .double { // Добавить для мобильных !!! 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .half {
         width: 50%;
         overflow: auto;
         float: left;
-        max-width: 48%;
+        max-width: 48%; 
     }
 }

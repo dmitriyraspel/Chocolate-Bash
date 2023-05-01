@@ -27,14 +27,3 @@ body.home .site-header {
     }
 
 }
-
-
-
-// For slider !!!
-.itc-slider,
-.hpslider {
-    @include max-width(600px) {
-        max-height: 800px;
-        overflow: hidden;
-    }
-}

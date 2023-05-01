@@ -17,6 +17,7 @@
         line-height: 16px;
         display: flex;
         margin-right: 16px;
+        min-width: max-content;
 
         &::before {
             content: "";

@@ -14,6 +14,10 @@
     z-index: -10;
     max-height: 1px;
     overflow: hidden;
+
+    @include min-width(782px) {
+        padding-top: 63px;
+    }
 }
 .mobile-nav {
     @include container;
@@ -89,7 +93,7 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height
         opacity: 1;
         transform: translateY(0);
         z-index: 888;
-        max-height: 1500px;
+        max-height: 5000px;
         overflow: auto;
     }
 }

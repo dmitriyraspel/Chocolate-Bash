@@ -47,6 +47,7 @@
         font-size: 15px;
         padding-left: 20px;
         margin-top: auto;
+        margin-bottom: 20px;
     }
     &__social {
         position: relative;
@@ -98,9 +99,9 @@
     }
 }
 
-// .reviews:not(.slider--active) .reviews__items {
+// .reviews:not(.--slider--active) .reviews__items {
 //     flex-wrap: nowrap;
 // }
-.slider--active .reviews__items {
+.--slider--active .reviews__items {
     flex-wrap: nowrap;
 }
