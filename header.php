@@ -62,14 +62,14 @@ $wrapper_classes .= $template_story ? ' --absolute' : '';
 			<div class="site-branding">
 				<div class="site-logo">
 					<?php if ( is_front_page() || is_home() ) : ?>
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/chocolate-bash-logo-mobile.png'?>" class="custom-logo only-mobile" alt="<?php bloginfo( 'name' ); ?>">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/chocolate-bash-logo.png'?>" class="custom-logo no-mobile" alt="<?php bloginfo( 'name' ); ?>">
+							<img src="<?php echo get_template_directory_uri() . '/assets/img/short-logo.svg'?>" class="custom-logo only-mobile" alt="<?php bloginfo( 'name' ); ?>">
+							<img src="<?php echo get_template_directory_uri() . '/assets/img/full-logo.svg'?>" class="custom-logo no-mobile" alt="<?php bloginfo( 'name' ); ?>">
 						<?php
 					else :
 						?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" aria-current="page">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/chocolate-bash-logo-mobile.png'?>" class="custom-logo only-mobile" alt="<?php bloginfo( 'name' ); ?>">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/chocolate-bash-logo.png'?>" class="custom-logo no-mobile" alt="<?php bloginfo( 'name' ); ?>">
+							<img src="<?php echo get_template_directory_uri() . '/assets/img/short-logo.svg'?>" class="custom-logo only-mobile" alt="<?php bloginfo( 'name' ); ?>">
+							<img src="<?php echo get_template_directory_uri() . '/assets/img/full-logo.svg'?>" class="custom-logo no-mobile" alt="<?php bloginfo( 'name' ); ?>">
 						</a>
 						<?php
 					endif; ?>
