@@ -17,7 +17,7 @@ function dimox_breadcrumbs() {
 	$text['page']     = 'Page %s'; // text 'Page N'
 	$text['cpage']    = 'Comment Page %s'; // text 'Comment Page N'
 
-	$wrap_before    = '<nav class="breadcrumbs container" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
+	$wrap_before    = '<nav class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
 	$wrap_after     = '</nav><!-- .breadcrumbs -->'; // the closing wrapper tag
 	$sep            = '<span class="breadcrumbs__separator"></span>'; // separator between crumbs
 	$before         = '<span class="breadcrumbs__current">'; // tag before the current crumb

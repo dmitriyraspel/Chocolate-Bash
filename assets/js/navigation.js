@@ -14,5 +14,12 @@
 		document.body.classList.toggle( 'mobile-navigation-open' );
 	} );
 
+	const tagsNavToggle = document.querySelector('.tags-nav__label');
+    if ( tagsNavToggle ) {
+        tagsNavToggle.addEventListener( 'click', function() {
+            tagsNavToggle.parentElement.classList.toggle( '--active' );
+        } );
+    }
+
 }() );
 
