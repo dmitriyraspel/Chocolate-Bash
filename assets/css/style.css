@@ -610,6 +610,34 @@ figure {
   margin: 1em 0;
 }
 
+.product-table__title {
+  font-size: 18px;
+  line-height: 1;
+  color: #462324;
+  font-weight: 700;
+  margin-bottom: 20px !important;
+}
+@media (min-width: 767px) {
+  .product-table__title {
+    font-size: 17px;
+  }
+}
+
+.product-table table {
+  margin-top: 0 !important;
+}
+.product-table table td,
+.product-table table th {
+  border: none;
+  color: #462324;
+}
+.product-table table thead {
+  border: none;
+}
+.product-table table thead th {
+  text-align: left;
+}
+
 a {
   color: #462324;
   font-family: "Inter", sans-serif;
@@ -2707,6 +2735,47 @@ input[type=range].slide-to-submit::-moz-range-thumb {
 
 .close-parent-link {
   cursor: pointer;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  font-weight: 600;
+  color: #462324;
+  font-size: 14px;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+@media (min-width: 999.84px) {
+  .breadcrumbs {
+    font-size: 18px;
+    margin-top: 70px;
+  }
+}
+.breadcrumbs a {
+  position: relative;
+  color: #462324;
+  font-weight: 400;
+  font-size: 14px;
+}
+@media (min-width: 999.84px) {
+  .breadcrumbs a {
+    font-size: 18px;
+  }
+}
+.breadcrumbs__separator {
+  width: 10px;
+  height: 12px;
+  margin: 5px 8px 0px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/arrow-right.svg);
+}
+@media (min-width: 999.84px) {
+  .breadcrumbs__separator {
+    margin: 7px 10px 0px;
+  }
 }
 
 /* Comments
