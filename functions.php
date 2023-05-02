@@ -82,6 +82,8 @@ function rspl_theme_setup() {
 			'mobile'	=> __( 'Mobile Navigation', 'rspl_theme' ),
 			'social'	=> __( 'Social Links Navigation','rspl_theme' ),
 			'footer'	=> __( 'Footer Navigation', 'rspl_theme' ),
+			'catMenu'	=> __( 'Category Navigation', 'rspl_theme' ),
+			'tagsMenu'	=> __( 'Tags Navigation', 'rspl_theme' ),
 		)
 	);
 
