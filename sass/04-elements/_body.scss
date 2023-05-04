@@ -4,6 +4,7 @@ body {
 }
 .site-main {
 	overflow-x: hidden;
+	min-height: 250px;
 }
 @media screen and (max-width: $breakpoint-nav ) {
 	body.mobile-navigation-open {

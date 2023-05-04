@@ -57,10 +57,15 @@
 	line-height: 1;
 	padding: 8px 12px;
 	font-weight: bold;
+	color: #E2D0D4;
+    background: #462324;
 	@media (min-width: $breakpoint-nav) {
 		font-size: 12px;
 		min-width: 240px;
 		height: 37px;
+	}
+	&:hover {
+		color: $brown;
 	}
 }
 

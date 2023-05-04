@@ -56,13 +56,13 @@ $button--color-background: $brown;
 $button--font-family: inherit;
 $button--font-size: $global--font-size;
 $button--font-weight: bold;
-$button--line-height: 1.5;
+$button--line-height: 20px;
 
 $button--border-width: 1px;
 $button--border: $button--border-width solid $pink;
 
 $button--border-radius: 90px;
-$button--padding-vertical: 12px;
+$button--padding-vertical: 11px;
 $button--padding-horizontal: 32px;
 // Hover
 $button--color-text-hover: $brown;
@@ -89,7 +89,7 @@ $form--padding-vertical: 13px;
 $form--padding-horizontal: 24px;
 
 $form--checkbox-color: $form--border-color;
-$form--checkbox-color-active: $color__accent;
+$form--checkbox-color-active: $brown;
 $form--checkbox-color-disabled: #F6F8FF;
 $form--checkbox-color-disabled-inner: #E1E6F9;
 
@@ -141,10 +141,10 @@ $footer--color-background: $global--color-background;
 $footer--color-text: $global--color-primary;
 $footer--color-social-link: $brown;
 $footer--color-link: $global--color-secondary;
-$footer--color-link-hover: #1adf1a;
+$footer--color-link-hover: $brown;
 
 // Colors
-$color__background-hr: $color__accent;
+$color__background-hr: $brown;
 $color__background-pre: #f7f7f7;
 $color__background-ins: #f7f7f7;
 $filter__color-bg: transparentize($pink, 0.6);

@@ -1,4 +1,6 @@
 button,
+.button, .btn,
+.wp-block-button__link,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -13,9 +15,9 @@ input[type="submit"] {
 
 	padding: $button--padding-vertical $button--padding-horizontal;
 	transition: $base-transition;
-	
+	display: inline-block;
 	cursor: pointer;
-
+	
 	&:hover {
 		color: $button--color-text-hover;
 		background: $button--color-background-hover;
