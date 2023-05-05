@@ -114,9 +114,9 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 
 remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
 
-
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 if ( ! function_exists( 'rspl_theme_woocommerce_template_loop_product_before_thumbnail' ) ) {
 	/**
