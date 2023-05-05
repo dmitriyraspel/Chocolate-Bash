@@ -954,6 +954,7 @@ label {
 .default-max-width {
   margin-left: auto;
   margin-right: auto;
+  width: 720px;
   max-width: min(88vw, 720px);
 }
 
@@ -975,6 +976,7 @@ label {
 .alignwide {
   margin-left: auto;
   margin-right: auto;
+  width: 1174px;
   max-width: min(88vw, 1174px);
   position: relative;
 }
