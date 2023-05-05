@@ -1,95 +1,42 @@
 <?php
 /**
  * The template for displaying archive pages
- * 
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
  * @package rspl_base
  */
 
+get_header();
+	if ( have_posts() ) : ?>
 
-get_header(); ?>
+			<header class="page-header">
+				<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
+			</header><!-- .page-header -->
 
-    <?php if (has_nav_menu('tagsMenu')) : ?>
-        <div class="container search-tags-wrap">
-            <?php get_search_form(); ?>
-            <div class="tags-nav-wrap">
-            <span class="tags-nav__label">Filter by:</span>
-                <?php 
-                get_template_part( 'template-parts/tags-nav' );
-                //get_template_part( 'template-parts/filter-tags' ); 
-                ?>
-            </div><!-- /.tags-nav-wrap -->
-        </div><!-- /.container -->    
-    <?php endif; ?>
-    
-    
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
 
-<div class="container byo archive-main">
+				/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', get_post_type() );
 
-    <?php get_template_part( 'template-parts/category-nav' ); ?>
-        
-    
-    <div class="articles-wrap">    
-<!-- <div class="articles"> -->
+			endwhile;
 
+			the_posts_navigation();
 
-        <?php if ( have_posts() ) : ?>
-            <?php
-            /* Start the Loop */
-            while ( have_posts() ) :
-                the_post(); ?>
+		else :
 
+			get_template_part( 'template-parts/content', 'none' );
 
-            
-
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            
-                <div class="post-thumbnail">
-                    <?php if ( has_post_thumbnail() ) { ?>
-                        <a class="post-thumbnail__link" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-                            <?php
-                            the_post_thumbnail(
-                                'post-thumbnail',
-                                array(
-                                    'alt' => the_title_attribute(
-                                        array(
-                                            'echo' => false,
-                                            )
-                                        ),
-                                        )
-                                    );
-                                    ?>
-                        </a>
-                    <?php 
-                    } else { ?>
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/post-thumbnail-bg.png'?>" class="" alt="<?php the_title(); ?>">
-                    <?php
-                    } ?>
-                </div><!-- .post-thumbnail -->
-
-               
-
-                <div class="entry-title-wrap">
-                    <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-                    <span class="entry-price">4.99 QAR</span>
-                </div><!-- /.entry-title-wrap -->
-                   
-
-                
-
-
-            </article><!-- #post-<?php the_ID(); ?> -->
-
-            <?php endwhile;
-
-        else :
-
-            get_template_part( 'template-parts/content', 'none' );
-
-        endif; ?>
-        <!-- </div> -->
-        <!-- /.articles -->
-    </div><!-- /.articles-wrap -->
-</div><!-- /.container -->
-
-<?php
+		endif;
+	
 get_footer();
