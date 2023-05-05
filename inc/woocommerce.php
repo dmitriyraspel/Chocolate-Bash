@@ -162,6 +162,14 @@ if ( ! function_exists( 'rspl_theme_template_loop_product_title' ) ) {
 }
 add_action( 'woocommerce_shop_loop_item_title', 'rspl_theme_template_loop_product_title', 10 );
 
+function rspl_theme_change_existing_currency_symbol( $currency_symbol, $currency ) {
+	switch( $currency ) {
+		case 'QAR': $currency_symbol = 'QAR'; break;
+	}
+	return $currency_symbol;
+}
+add_filter('woocommerce_currency_symbol', 'rspl_theme_change_existing_currency_symbol', 10, 2);
+
 
 if ( ! function_exists( 'rspl_theme_woocommerce_wrapper_before' ) ) {
 	/**
