@@ -5,10 +5,6 @@ a {
 	font-weight: $link--font-weight;
 	transition: $base-transition;
 
-	&:visited {
-		color: $color__link-visited;
-	}
-
 	&:hover,
 	&:focus,
 	&:active {
