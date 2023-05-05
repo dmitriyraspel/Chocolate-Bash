@@ -3100,23 +3100,10 @@ h4.franchise-section-2__card-name {
     padding: 30px;
   }
 }
-.archive-main .articles-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+.shop-main {
+  margin-bottom: 70px;
 }
-.archive-main .articles-wrap > * {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-.archive-main article {
-  flex: 0 0 auto;
-  width: 168px;
-  max-width: calc(50% - 30px);
-  margin-bottom: 20px;
-}
-.archive-main .post-thumbnail {
+.shop-main .post-thumbnail {
   height: 168px;
   width: 168px;
   max-width: 100%;
@@ -3125,50 +3112,134 @@ h4.franchise-section-2__card-name {
   overflow: hidden;
   margin-bottom: 12px;
 }
-.archive-main .post-thumbnail a {
+@media (min-width: 1200px) {
+  .shop-main .post-thumbnail {
+    height: 210px;
+    width: 210px;
+  }
+}
+.shop-main .post-thumbnail img {
   display: block;
-}
-.archive-main .entry-title-wrap {
-  display: block;
-}
-.archive-main .entry-title {
-  font-size: 16px;
-  color: #462324;
-  font-weight: 700;
-}
-.archive-main .entry-price {
-  font-size: 14px;
-  color: #462324;
-  font-weight: 400;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  height: auto;
+  margin: 0 !important;
 }
 
+.woocommerce ul.products {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.woocommerce ul.products > * {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.woocommerce ul.products li.product {
+  float: unset;
+  flex: 0 0 auto;
+  width: 168px !important;
+  max-width: calc(50% - 30px);
+  margin: 0 15px 20px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media (min-width: 999.84px) {
-  .archive-main {
-    display: flex;
-  }
-  .archive-main .category-nav {
-    display: block;
-    width: 200px;
-    flex-shrink: 0;
-  }
-  .archive-main .articles-wrap {
-    width: calc(100% - 200px);
-  }
-  .archive-main article {
+  .woocommerce ul.products li.product {
     max-width: calc(25% - 30px);
     margin-bottom: 30px;
   }
 }
 @media (min-width: 1200px) {
-  .archive-main article {
-    width: 210px;
+  .woocommerce ul.products li.product {
+    width: 210px !important;
   }
-  .archive-main .post-thumbnail {
+}
+.woocommerce ul.products li.product a {
+  display: block;
+  outline: transparent;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #462324;
+  font-weight: 700;
+  min-height: 42px;
+}
+@media (min-width: 1200px) {
+  .woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 17px;
+  }
+}
+.woocommerce ul.products li.product .price {
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  color: #462324;
+  font-weight: 400;
+}
+.woocommerce ul.products li.product .price .amount {
+  margin-left: auto;
+}
+.woocommerce ul.products li.product .button {
+  display: block;
+  width: 168px;
+  max-width: 100%;
+  height: 36px;
+  margin-top: 15px;
+  background: #E2D0D4;
+  color: #462324;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 30px;
+  margin-top: auto;
+}
+
+.woocommerce nav.woocommerce-pagination ul,
+.woocommerce nav.woocommerce-pagination ul li {
+  border: none;
+  background: transparent;
+}
+.woocommerce nav.woocommerce-pagination ul a, .woocommerce nav.woocommerce-pagination ul span,
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+  font-weight: 600;
+  color: #462324;
+}
+.woocommerce nav.woocommerce-pagination ul span.current,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+  font-weight: 400;
+  background: transparent;
+  color: #462324;
+}
+
+@media (min-width: 999.84px) {
+  .shop-main {
+    display: flex;
+  }
+  .shop-main .category-nav {
+    display: block;
+    width: 200px;
+    flex-shrink: 0;
+  }
+  .shop-main .products_wrap {
+    width: calc(100% - 200px);
+  }
+}
+@media (min-width: 1200px) {
+  .shop-main {
+    margin-bottom: 100px;
+  }
+  .shop-main .post-thumbnail {
     height: 210px;
     width: 210px;
-  }
-  .archive-main .entry-title {
-    font-size: 17px;
   }
 }
 /* Comments

@@ -197,6 +197,6 @@ require get_template_directory() . '/inc/breadcrumbs.php';
 /**
  * Load WooCommerce compatibility file.
  */
-// if ( class_exists( 'WooCommerce' ) ) {
-// 	require get_template_directory() . '/inc/woocommerce.php';
-// }
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/woocommerce.php';
+}
