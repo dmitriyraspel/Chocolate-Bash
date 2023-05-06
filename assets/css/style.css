@@ -3159,7 +3159,7 @@ h4.franchise-section-2__card-name {
 @media (min-width: 999.84px) {
   .woocommerce ul.products li.product {
     max-width: calc(25% - 30px);
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
 }
 @media (min-width: 1200px) {
@@ -3170,6 +3170,8 @@ h4.franchise-section-2__card-name {
 .woocommerce ul.products li.product a {
   display: block;
   outline: transparent;
+  width: 100%;
+  max-width: 100%;
 }
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
   margin: 0;
@@ -3190,24 +3192,28 @@ h4.franchise-section-2__card-name {
   font-size: 14px;
   color: #462324;
   font-weight: 400;
-}
-.woocommerce ul.products li.product .price .amount {
-  margin-left: auto;
+  margin-bottom: 12px;
 }
 .woocommerce ul.products li.product .button {
   display: block;
   width: 168px;
   max-width: 100%;
-  height: 36px;
-  margin-top: 15px;
+  height: 42px;
   background: #E2D0D4;
+  border: 1px solid #E2D0D4;
+  border-radius: 30px;
   color: #462324;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
-  line-height: 16px;
-  border-radius: 30px;
+  line-height: 1.2;
   margin-top: auto;
+  padding: 11px 24px;
+}
+.woocommerce ul.products li.product .button:hover, .woocommerce ul.products li.product .button:focus {
+  background: #E2D0D4;
+  color: #462324;
+  border: 1px solid #462324;
 }
 
 .woocommerce nav.woocommerce-pagination ul,
