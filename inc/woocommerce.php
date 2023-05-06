@@ -170,6 +170,18 @@ function rspl_theme_change_existing_currency_symbol( $currency_symbol, $currency
 }
 add_filter('woocommerce_currency_symbol', 'rspl_theme_change_existing_currency_symbol', 10, 2);
 
+function rspl_theme_add_to_cart_text($text) {
+	
+	global $product;
+	if ( $product->is_type( 'variable' ) ) {
+		$text = __( 'customize now', 'rspl_theme' );
+	} else {
+		$text = __( 'order now', 'rspl_theme' );
+	}
+	return $text;	
+}
+add_filter( 'woocommerce_product_add_to_cart_text', 'rspl_theme_add_to_cart_text', 25 );
+
 
 if ( ! function_exists( 'rspl_theme_woocommerce_wrapper_before' ) ) {
 	/**

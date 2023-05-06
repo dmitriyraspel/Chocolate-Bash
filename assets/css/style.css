@@ -3779,6 +3779,10 @@ body.rtl .site-footer .footer__inner {
   margin-top: 30px;
 }
 
+.woocommerce ul.products li.product .woocommerce-placeholder {
+  border: none;
+}
+
 /* Accessibility
 --------------------------------------------- */
 /* Text meant only for screen readers. */

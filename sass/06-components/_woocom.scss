@@ -68,3 +68,7 @@
     @include container;
     margin-top: 30px;
 }
+
+.woocommerce ul.products li.product .woocommerce-placeholder {
+    border: none;
+}
