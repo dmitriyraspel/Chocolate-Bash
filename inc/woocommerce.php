@@ -182,21 +182,24 @@ function rspl_theme_add_to_cart_text($text) {
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'rspl_theme_add_to_cart_text', 25 );
 
-if ( ! function_exists( 'rspl_theme_woocommerce__breadcrumb' ) ) {
-	/**
-	 * Before Content.
-	 *
-	 * Wraps all WooCommerce content in wrappers which match the theme markup.
-	 *
-	 * @return void
-	 */
-	function rspl_theme_woocommerce__breadcrumb() {
-		if ( is_product() ) {
-			echo '<div class="container breadcrumb-wrap">';
-			dimox_breadcrumbs();
-			echo '</div>';
-		}		
-	}
+/// Breadcrumbs 
+function rspl_theme_woocommerce_breadcrumbs_home_url() {
+	
+	return esc_url( home_url( '/menu' ) );
+	
+}
+add_filter( 'woocommerce_breadcrumb_home_url', 'rspl_theme_woocommerce_breadcrumbs_home_url' );
+
+function rspl_theme_woocommerce__breadcrumb() {
+	if ( is_product() ) {
+		$args = array(
+			'delimiter'		=> '<span class="breadcrumbs__separator"></span>',
+			'wrap_before'	=> '<nav class="breadcrumbs container">',
+			'wrap_after'	=> '</nav>',
+			'home'			=> 'Menu',
+		);
+		woocommerce_breadcrumb( $args );
+	}		
 }
 add_action( 'woocommerce_before_main_content', 'rspl_theme_woocommerce__breadcrumb', 20 );
 //
