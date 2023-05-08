@@ -182,6 +182,25 @@ function rspl_theme_add_to_cart_text($text) {
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'rspl_theme_add_to_cart_text', 25 );
 
+if ( ! function_exists( 'rspl_theme_woocommerce__breadcrumb' ) ) {
+	/**
+	 * Before Content.
+	 *
+	 * Wraps all WooCommerce content in wrappers which match the theme markup.
+	 *
+	 * @return void
+	 */
+	function rspl_theme_woocommerce__breadcrumb() {
+		if ( is_product() ) {
+			echo '<div class="container breadcrumb-wrap">';
+			dimox_breadcrumbs();
+			echo '</div>';
+		}		
+	}
+}
+add_action( 'woocommerce_before_main_content', 'rspl_theme_woocommerce__breadcrumb', 20 );
+//
+
 
 if ( ! function_exists( 'rspl_theme_woocommerce_wrapper_before' ) ) {
 	/**

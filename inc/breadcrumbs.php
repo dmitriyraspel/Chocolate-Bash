@@ -8,7 +8,7 @@
 function dimox_breadcrumbs() {
 
 	/* === OPTIONS === */
-	$text['home']     = 'Home'; // text for the 'Home' link
+	$text['home']     = 'Menu'; // text for the 'Home' link
 	$text['category'] = 'Archive by Category "%s"'; // text for a category page
 	$text['search']   = 'Search Results for "%s" Query'; // text for a search results page
 	$text['tag']      = 'Posts Tagged "%s"'; // text for a tag page
@@ -207,9 +207,9 @@ function dimox_breadcrumbs() {
 			if ( $show_current ) echo $before . $text['404'] . $after;
 			elseif ( $show_last_sep ) echo $sep;
 
-		} elseif ( has_post_format() && ! is_singular() ) {
-			if ( $show_home_link && $show_current ) echo $sep;
-			echo get_post_format_string( get_post_format() );
+		// } elseif ( has_post_format() && ! is_singular() ) {
+		// 	if ( $show_home_link && $show_current ) echo $sep;
+		// 	echo get_post_format_string( get_post_format() );
 		}
 
 		echo $wrap_after;
