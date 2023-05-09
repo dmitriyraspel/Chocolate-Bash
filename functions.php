@@ -182,6 +182,10 @@ require get_template_directory() . '/inc/icon-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Shortcode.
+ */
+require get_template_directory() . '/inc/shortcode.php';
 
 
 /**

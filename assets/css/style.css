@@ -1866,12 +1866,6 @@ body.rtl .header__inner {
   display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  overflow: hidden;
-}
-
 .page-links {
   clear: both;
 }
@@ -3966,6 +3960,98 @@ input[type=range].slide-to-submit::-moz-range-thumb {
 @media (min-width: 999.88px) {
   .location-before-footer__contact {
     font-size: 35px;
+  }
+}
+/* Craving */
+.craving-wrap {
+  width: 100%;
+  max-width: 100%;
+  background-color: #462324;
+}
+
+.craving {
+  width: 88vw;
+  max-width: 1174px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+  padding-bottom: 66px;
+  color: #fff;
+  background-color: #462324;
+}
+
+.craving__img {
+  width: 285px;
+  margin-bottom: 0;
+}
+
+.craving__desc {
+  margin-top: 0;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.craving__link {
+  display: block;
+  font-size: 14px;
+  color: #fff !important;
+  text-decoration-line: underline;
+  display: flex;
+}
+.craving__link::after {
+  content: "->";
+  display: block;
+}
+
+.craving__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.craving__item {
+  flex: 0 0 48%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.craving__item-img {
+  margin-right: 15px;
+  width: 40px;
+  display: block;
+}
+
+.craving__item-title {
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+@media (min-width: 767.88px) {
+  .craving {
+    padding-top: 120px;
+  }
+  .craving__item-title {
+    font-size: 18px;
+  }
+  .craving__item-img {
+    margin-right: 20px;
+    width: 50px;
+  }
+}
+@media (min-width: 999.88px) {
+  .craving {
+    padding-bottom: 80px;
+  }
+  .craving__img {
+    width: 355px;
+  }
+  .craving__item {
+    flex: 0 0 25%;
   }
 }
 /* Comments
