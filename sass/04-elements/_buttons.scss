@@ -28,11 +28,18 @@ input[type="submit"] {
 	&:focus {
 		// border-color: $button--color-background-active;
 	}
+}
 
-	&.button_200 {
-		min-width: 200px;
+.button {
+	&:active,
+	&:focus {
+		color: $button--color-text;
 	}
-	&.button_100 {
-		width: 100%;
-	}
+}
+
+.button_200 {
+	min-width: 200px;
+}
+.button_100 {
+	width: 100%;
 }

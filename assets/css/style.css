@@ -657,20 +657,15 @@ input[type=submit]:hover {
   background: #E2D0D4;
   border: 1px solid #462324;
 }
-button.button_200,
-.button.button_200, .btn.button_200,
-.wp-block-button__link.button_200,
-input[type=button].button_200,
-input[type=reset].button_200,
-input[type=submit].button_200 {
+.button:active, .button:focus {
+  color: #E2D0D4;
+}
+
+.button_200 {
   min-width: 200px;
 }
-button.button_100,
-.button.button_100, .btn.button_100,
-.wp-block-button__link.button_100,
-input[type=button].button_100,
-input[type=reset].button_100,
-input[type=submit].button_100 {
+
+.button_100 {
   width: 100%;
 }
 
