@@ -1,130 +1,626 @@
 .franchise-section-1 {
-    border: 1px solid $pink;
-    border-radius: 30px;
-    padding: 30px;
+    padding-top: 330px;
+
+    background-position-x: left;
+    // background-position-y: top;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    background-image: url(../img/franchise-section-1-bg-mob.png);
+
+    &__title {
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 700;
+    }
 
     &__btn a {
-        width: 240px;
+        // width: 240px;
+        font-size: 12px;
+        width: 350px;
+        max-width: 100%;
     }
 }
-
-.franchise-section-2 {}
-
-.franchise-section-2__items > .wp-block-group__inner-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.franchise-section-2__card {
-    border: 1px solid $pink;
-    border-radius: 30px;
-    padding: 20px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    min-height: 320px;
-    flex: 0 0 auto;
-
-    width: 250px;
-    max-width: calc(50% - 15px);
-
-    @include min-width(700px) {
-        max-width: calc(50% - 15px);
-    }
-    @include min-width(999.88px) {
-        max-width: calc(25% - 15px);
-    }
-
-    & > .wp-block-group__inner-container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    h4 {
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 400;
-        margin: 0;
-        margin-bottom: 20px;
-    }
-
-}
-h4.franchise-section-2__card-name {
-    margin-top: auto;
-    font-weight: 600;
-    min-height: 40px;
-}
-
-
-.franchise-section-3 {
-    background: $pink;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    .hf-fields-wrap {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        &>* {
-            @include col(12);
-        }
-
-        .half {
-            @include media(md) {
-                @include col(6);
-            }
-        }
-    }
-
-}
-
-.franchise-section-4__chart {
-
-    &::after {
-        content: "";
-        display: block;
-        height: 10px;
-        // background: $brown;
-        background: $pink;
-        border-radius: 11px;
-    }
-}
-.chart-22::after  {
-    width: 220px;
-}
-.chart-12::after {
-    width: 120px;
-}
-.chart-3::after {
-    width: 30px;
-}
-
-.franchise-large {
-    .hf-fields-wrap {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        &>* {
-            @include col(12);
-        }
-
-        .half {
-            @include media(md) {
-                @include col(6);
-            }
-        }
-    }
-} 
-    
 
 @include media(md) {
     .franchise-section-1 {
-        border: 1px solid $pink;
-        border-radius: 30px;
-        padding: 30px;
-
-    }   
+        min-height: 670px;
+        padding-top: 300px;
+        background-position-x: right;
+        background-position-y: 0px;
+        background-size: contain;
+        background-image: url(../img/franchise-section-1-bg.png);
+    }
 }
 
+
+.franchise-section-2-1,
+.franchise-section-2-2 {
+    .wp-block-group__inner-container {
+        @include container;
+    }
+}
+
+.franchise-section-2-1 {
+    background-color: $brown;
+    color: $pink;
+    padding-top: 46px;
+    padding-bottom: 170px;
+
+    h3 {
+        margin-top: 0;
+        color: $pink;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+}
+
+.franchise-section-2-2 {
+    // background-size: contain;
+    position: relative;
+    background-image: url(../img/franchise-section-2-2-bg-mob.png);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    margin-top: -140px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 30%;
+        background: $pink;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 700;
+        max-width: 160px;
+    }
+}
+@include min-width(700px) {
+    .franchise-section-2-1 {
+        margin-top: 80px;
+        padding-top: 80px;
+        padding-bottom: 210px;
+    }
+    .franchise-section-2-2 {
+        background-image: url(../img/franchise-section-2-2-bg.png);
+        background-position-x: right;
+        margin-top: -160px;
+        padding-top: 170px;
+        padding-bottom: 82px;
+
+        .wp-block-group__inner-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .wp-block-heading {
+            flex: 0 0 160px;
+        }
+        
+    }
+}
+
+.franchise-slider-wrap {
+    @include min-width(700px) {
+        flex: 0 0 auto;
+        width: 770px;
+        // max-width: 100%;
+        max-width: calc(100% - 200px);
+        
+    }
+}
+.franchise-slider .itc-slider__btn {
+    @include min-width(700px) {
+        display: block;
+    }
+}
+
+.franchise-slider-card__desc {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+.franchise-slider-card__name {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+
+}
+
+/// franchise-section-why
+.franchise-section-why__card-img-mobile {
+    @include min-width(767.88px) {
+        display: none;
+    }
+}
+.franchise-section-why__card-img-pc {
+    @include max-width(767.88px) {
+        display: none;
+    }
+}
+
+.franchise-section-why {
+    position: relative;
+    overflow: hidden;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+}
+
+.franchise-section-why__header,
+.franchise-section-why__footer {
+    position: relative;
+    z-index: 2;
+}
+
+.franchise-section-why__header-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.franchise-section-why__header-desc {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.7px;
+    padding-left: 10px;
+    margin-bottom: 60px;
+    min-width: 260px;
+}
+.franchise-section-why__card {
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 2;
+
+    h3 {
+        font-size: 30px;
+        line-height: 28px;
+        font-weight: 500;
+        margin-top: 0;
+        max-width: 270px;
+    }
+
+}
+.franchise-section-why__card-img {
+    position: relative;
+    width: 360px;
+    max-width: 100%;
+
+    // &--card-img-1::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 85px;
+    //     height: 95px;
+    //     background-image: url(../img/franchise-arrow-m.png);
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
+    // }
+
+    // &--card-img-1::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 50%;
+    //     width: 85px;
+    //     height: 95px;
+    //     background-image: url(../img/franchise-arrow-m.png);
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
+    // }
+}
+
+@include max-width(767.88px) {
+
+    .franchise-section-why::before,
+    .franchise-section-why::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1564px;
+        height: 744px;
+        top: -170px;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../img/franchise-w-bg.png);
+        z-index: 0;
+    }
+    .franchise-section-why::after {
+        top: 50%;
+    }
+}
+
+@include min-width(767.88px) {
+    .franchise-section-why {
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
+    .franchise-section-why__header {
+        width: 650px;
+        min-width: 100%;
+    }
+    .franchise-section-why__header-desc {
+        font-size: 43px;
+        line-height: 51px;
+    }
+    .franchise-section-why__card {
+        display: flex;
+        width: 1064px;
+        max-width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .franchise-section-why__card--left {
+        margin-top: -40px;
+        .franchise-section-why__card-content {
+            order: 2;
+        }
+        .franchise-section-why__card-img {
+            order: 1;
+        }    
+    }
+    
+    .franchise-section-why__card-content,
+    .franchise-section-why__card-img {
+        flex: 0 0 48%;
+
+    }
+    .franchise-section-why__card-content {
+        width: 489px;
+        // max-width: 50%;
+    }
+}
+
+@include min-width(999.88px) {
+    .franchise-section-why {
+        padding-top: 160px;
+    }
+    .franchise-section-why__card--left {
+        margin-top: -100px;
+    }
+    .franchise-section-why__footer {
+        width: 1064px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+///// franchise-section-map    ////////
+.franchise-section-map {
+    padding-top: 66px;  // 120
+    padding-bottom: 45px; //130
+}
+.franchise-section-map__regions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0 20px;
+    font-weight: 700;
+}
+.franchise-section-map__map-desc {
+    list-style: none;
+    margin: 20px 0 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+        display: flex;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0 15px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #E3E3E3;
+            margin-right: 10px;
+        }
+        &:last-child::before {
+            background: $pink;
+        }
+    }
+
+}
+
+.franchise-section-map__chart-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    min-width: max-content;
+}
+.franchise-section-map__chart-num {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.franchise-section-map__chart-wrap { // 300px
+    display: flex;
+    justify-content: center;
+}
+.franchise-section-map__chart {
+    position: relative;
+    height: 120px;
+    width: 85px;
+    margin: 0 15px;
+    
+    .wp-block-group__inner-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 55px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // background-image: url(../img/franchise-w-count.png);
+    }
+    &--count::before {
+        background-image: url(../img/franchise-w-count.png);
+    }
+    &--states::before {
+        background-image: url(../img/franchise-w-states.png);
+    }
+    &--countries::before {
+        background-image: url(../img/franchise-w-countries.png);
+    }
+}
+@media (min-width: 782px) {
+    .franchise-section-map {
+        .wp-block-column {
+            flex-basis: unset!important;
+        }
+    }
+    .franchise-section-map__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .franchise-section-map__chart-wrap {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .franchise-section-map__chart {
+        height: unset;
+        width: unset;
+        margin: 0;
+        padding-left: 70px;
+        margin-bottom: 20px;
+        
+        .wp-block-group__inner-container {
+            display: block;
+            text-align: left;
+        }
+
+        &::before {
+            left: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+    .franchise-section-map__regions {
+        font-size: 18px;
+        li {
+            margin: 0 15px;
+        }
+    }
+
+}
+@media (min-width: 999.88px) {
+    .franchise-section-map__regions {
+        font-size: 30px;
+        li {
+            margin: 0 15px;
+        }
+    }
+}
+.franchise-section-map__chart {}
+.franchise-section-map__chart--count {}
+.franchise-section-map__map-desc {}
+
+
+
+// .franchise-section-map__chart franchise-section-map__chart--count
+// .franchise-section-map__chart franchise-section-map__chart--states
+// .franchise-section-map__chart franchise-section-map__chart--countries
+@include media(lg) {
+
+    .franchise-section-map__paragraph-title {
+        font-style: 30px;
+    }
+}
+
+
+/// franchise-section-form ///////////
+.franchise-section-form {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    margin-bottom: 66px;
+}
+.franchise-section-form-columns {}
+.franchise-section-form__title {}
+
+
+.slide-to-submit-wrap {
+    position: relative;
+    @include min-width(500px) {
+        width: 100%;
+        max-width: 220px;
+    }
+    
+    input[type=submit].slide-to-submit-input, 
+    input[type=submit].slide-to-submit-input:hover,
+    input[type=submit].slide-to-submit-input:focus {
+        background: transparent;
+        border: 1px solid transparent;
+        font-size: 16px;
+        color: #462324;
+        line-height: 1;
+        width: max-content;
+        // width: 100%;
+        height: 46px;
+        margin: 0;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+
+    }
+
+    
+    input[type=range].slide-to-submit-slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 46px;
+        outline: none;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        padding: 0;
+    }
+    input[type=range].slide-to-submit-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 38px;
+        height: 38px;
+        background: $pink;
+        border-radius: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../img/icon-slide-btn.png);
+        cursor: pointer;
+        transition: 0.7s;
+    }
+    input[type=range].slide-to-submit-slider::-moz-range-thumb {
+        width: 38px;
+        height: 38px;
+        background: $pink;
+        border-radius: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../img/icon-slide-btn.png);
+        cursor: pointer;
+        transition: 0.7s;
+    }
+}
+.franchise-section-form form {
+    margin-top: 50px;
+}
+.franchise-section-form form {
+    .hf-fields-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; 
+        &>*{
+            flex: 0 0 auto;
+            width: calc( 100% - 30px );
+        }
+        .half {
+            // flex: 0 0 auto;
+            width: calc( 100% - 30px );
+            @include media(md) {
+                width: calc( 50% - 30px );
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@include media(lg) {
+    .franchise-section-form {
+        margin-bottom: 100px;
+    }
+}
+
+
+
+
+// .section-before-footer {
+//     position: relative;
+//     background: $brown;
+//     color: #fff;
+//     margin-bottom: 0;
+//     width: 100%;
+//     padding-bottom: 280px;
+// }
+
+.franchise-section-footer {
+    position: relative;
+    padding-top: 40px;
+
+    p {
+        letter-spacing: 0.3px;
+        width: 720px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.franchise-section-footer__btn .wp-block-button__link {
+    width: 344px;
+    max-width: 100%;
+    background-color: $pink;
+    color: $brown;
+    font-weight: 700;
+    @include min-width(999.88px) {
+        margin-bottom: 60px;
+    }
+}
+
+@include min-width(999.88px) {
+    .franchise-section-footer {
+        padding-top: 70px;
+    }
+    .franchise-section-footer__btn .wp-block-button__link {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 999.84px) {
+    body.page-template-template-franchise .site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}

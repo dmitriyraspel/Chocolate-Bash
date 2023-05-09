@@ -15,6 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
         mapsWrap.addEventListener('click', mapsWrapInit, {once: true})
     }
 
+    const franchiseSlider = document.getElementById('franchiseSlider');
+    if ( franchiseSlider ) {
+        franchiseSlider.classList.add('--slider--active');
+        ItcSlider.getOrCreateInstance(franchiseSlider);
+    }
+
+    const locationSection = document.getElementById('locationSection');
+    if ( locationSection ) {
+        locationSectionChange();
+    }
+    
+    
+
+    
+
     if (document.forms) {
         for (let i = 0; i < document.forms.length; i++) {
             let form = document.forms[i];
@@ -83,3 +98,27 @@ function slideFormClosePopUp(form) {
         }, false)
     }
 }
+
+
+
+function locationSectionChange() { 
+    let locationAmericaToogle   = document.getElementById('locationAmericaToogle');
+    let locationAsiaToogle      = document.getElementById( 'locationAsiaToogle' );
+    let locationAmericaContent  = document.getElementById( 'locationAmericaContent');
+    let locationAsiaContent     = document.getElementById( 'locationAsiaContent' );
+
+    locationAmericaToogle.addEventListener('click', ()=> {
+        locationAmericaToogle.classList.add('location-region--current');
+        locationAsiaToogle.classList.remove('location-region--current');
+        locationAmericaContent.classList.add('location-card-wrap--active');
+        locationAsiaContent.classList.remove('location-card-wrap--active');
+    })
+    locationAsiaToogle.addEventListener('click', ()=> {
+        locationAmericaToogle.classList.remove('location-region--current');
+        locationAsiaToogle.classList.add('location-region--current');
+        locationAmericaContent.classList.remove('location-card-wrap--active');
+        locationAsiaContent.classList.add('location-card-wrap--active');
+    })
+}
+
+

@@ -88,8 +88,10 @@
 
 // Shop
 @import "06-components/shop";
-// Single product
-@import "06-components/maxim";
+
+// Location
+@import "06-components/location";
+
 
 
 /* Comments
@@ -116,6 +118,9 @@
 @import "06-components/woocom";
 // Jetpack infinite scroll
 // @import "plugins/jetpack/infinite-scroll";
+
+// Single product
+@import "06-components/maxim";
 
 
 /* Accessibility
