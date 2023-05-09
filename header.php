@@ -10,7 +10,7 @@
  */
 $has_header_nav = has_nav_menu( 'header' );
 $has_mobile_nav = has_nav_menu( 'mobile' );
-$template_story = is_page_template( 'templates/template-story.php' );
+$template_story = is_page_template( 'templates/template-story.php' ) || is_page_template( 'templates/template-franchise.php' );
 $wrapper_classes  = 'site-header';
 $wrapper_classes .= $has_header_nav ? ' has-menu-header' : '';
 $wrapper_classes .= $has_mobile_nav ? ' has-menu-mobile' : '';
@@ -91,7 +91,9 @@ $wrapper_classes .= $template_story ? ' --absolute' : '';
 					</ul>
 				</div><!-- /.lang-wrap -->
 				
-				<button class="site-header__cta-button">Explore our menu</button>
+				<button class="site-header__cta-button">create order</button>
+				<!-- <a href="<?php // echo esc_url( home_url( '/menu' ) ); ?>" class="site-header__cta-button">create order</a> -->
+
 			</div><!-- /.site-header__extras -->
 
 			
