@@ -86,3 +86,19 @@ form .double { // Добавить для мобильных !!!
         max-width: 48%; 
     }
 }
+
+.double form .hf-fields-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    &>*{
+        flex: 0 0 auto;
+        width: calc( 100% - 30px );
+    }
+    .half {
+        width: calc( 100% - 30px );
+        @include media(md) {
+            width: calc( 50% - 30px );
+        }
+    }
+}
