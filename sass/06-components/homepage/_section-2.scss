@@ -1,13 +1,15 @@
 // For slider !!!
-.itc-slider,
-.hpslider {
-    @include max-width(600px) {
-        max-height: 800px;
-        overflow: hidden;
-    }
-}
+
 
 .hpsection-2 {
+
+    .itc-slider,
+    .hpslider {
+        @include max-width(600px) {
+            max-height: 800px;
+            overflow: hidden;
+        }
+    }
 
     .itc-slider__wrapper {
         @include max-width(768px) {

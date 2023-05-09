@@ -26,3 +26,44 @@
 .itc-slider__indicator {
     cursor: pointer;
 }
+
+.itc-slider__btn {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    
+    &_prev {
+        left: -40px;
+        background-image: url(../img/arrow_left.png);
+
+        &:hover,
+        &:focus {
+            background-position: center;
+            background-repeat: no-repeat;
+            border: none;
+            background-image: url(../img/arrow_left.png);
+        }
+
+    }
+    &_next {
+        right: -40px;
+        background-image: url(../img/arrow_right.png);
+        
+        &:hover,
+        &:focus {
+            background-position: center;
+            background-repeat: no-repeat;
+            border: none;
+            background-image: url(../img/arrow_right.png);
+        }
+    }
+}
