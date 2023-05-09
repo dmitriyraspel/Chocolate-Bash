@@ -197,6 +197,8 @@ function rspl_theme_woocommerce__breadcrumb() {
 			'wrap_before'	=> '<nav class="breadcrumbs container">',
 			'wrap_after'	=> '</nav>',
 			'home'			=> 'Menu',
+			// 'before'		=> '<span class="breadcrumbs__link">',
+			// 'after'			=> '</span>',
 		);
 		woocommerce_breadcrumb( $args );
 	}		

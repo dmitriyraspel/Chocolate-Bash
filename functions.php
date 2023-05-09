@@ -181,10 +181,7 @@ require get_template_directory() . '/inc/icon-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-/**
- * Breadcrumbs.
- */
-require get_template_directory() . '/inc/breadcrumbs.php';
+
 
 
 /**
