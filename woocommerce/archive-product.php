@@ -123,4 +123,10 @@ do_action( 'woocommerce_before_main_content' );
 	</div><!-- /.products_wrap -->
 </div><!-- /.shop-main -->
 
-<?php get_footer();
+
+<div class="section-before-footer">
+	<?php echo do_shortcode( '[chokolate_craving_section]'); ?>
+</div>
+
+<?php
+get_footer('beforefooter');
